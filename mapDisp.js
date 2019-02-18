@@ -14,24 +14,29 @@ function getParams(){
     }
     return params;
 }
+
 function write() {
   params = getParams();
-  address = unescape(params["address"]);
+  address1 = unescape(params["address1"]);
+  address2 = unescape(params["address2"]);
   city = unescape(params["city"]);
   state = unescape(params["state"]);
-  document.write("address: " + address + "<br>");
+  zip = unescape(params["zip"]);
+  document.write("address: " + address1 + " " + address2 +"<br>");
   document.write("city: " + city + "<br>");
-  document.write("state: " + state + "<br>");}
+  document.write("state: " + state + "<br>");
+  document.write("zip: " + zip + "<br>");}
+
 
 var map;
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: -34.397, lng: 150.644},
+    center: {lat: 42.0451, lng: -87.6877},
     zoom: 8
   });
 
   var geocoder = new google.maps.Geocoder();
-  var a = address + " " + city + " " + state;
+  var a = address1 + " " + address2 + " " + city + " " + state + " " + zip;
   geocoder.geocode({'address': a}, function(results, status) {
   if (status === 'OK') {
     map.setCenter(results[0].geometry.location);
@@ -39,6 +44,15 @@ function initMap() {
       map: map,
       position: results[0].geometry.location
     });
+    var infoWindow=new google.maps.InfoWindow({
+    content: a});
+    infoWindow.open(map, marker);
+    marker.addListener('click', function(){
+    infoWindow.open(map, marker)})
+
+    map.addListener('click', function(){
+      infoWindow.close();});
+
   } else {
     alert('Geocode was not successful for the following reason: ' + status);
   }
