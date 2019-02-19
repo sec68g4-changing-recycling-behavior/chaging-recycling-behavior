@@ -1,3 +1,5 @@
+// currently not in use
+
 var dropCreateFormInfo = [];
 
 function dropCreateSubmit() {
