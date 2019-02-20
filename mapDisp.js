@@ -17,16 +17,26 @@ function getParams(){
 
 function write() {
   params = getParams();
-  address1 = unescape(params["address1"]);
-  address2 = unescape(params["address2"]);
-  city = unescape(params["city"]);
-  state = unescape(params["state"]);
-  zip = unescape(params["zip"]);
+  address1 = cleanup(unescape(params["address1"]));
+  address2 = cleanup(unescape(params["address2"]));
+  city = cleanup(unescape(params["city"]));
+  state = cleanup(unescape(params["state"]));
+  zip = cleanup(unescape(params["zip"]));
+
   document.write("address: " + address1 + " " + address2 +"<br>");
   document.write("city: " + city + "<br>");
   document.write("state: " + state + "<br>");
   document.write("zip: " + zip + "<br>");}
 
+function cleanup(s) {
+    result = s;
+    var idx = s.indexOf('+');
+    if (idx != -1){
+      result = s.substring(0, idx);
+      result = result + ' ' + cleanup(s.substring(idx + 1, s.length));
+    }
+    return result;
+}
 
 var map;
 function initMap() {
