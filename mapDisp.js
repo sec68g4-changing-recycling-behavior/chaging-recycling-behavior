@@ -20,13 +20,31 @@ function write() {
   address1 = cleanup(unescape(params["address1"]));
   address2 = cleanup(unescape(params["address2"]));
   city = cleanup(unescape(params["city"]));
-  state = cleanup(unescape(params["state"]));
+  state = unescape(params["state"]);
   zip = cleanup(unescape(params["zip"]));
+  data = cleanup(unescape(params["endDate"]));
+  notes =  cleanup(unescape(params["notes"]));
+  var mat = '';
+  mat = getRecyclables("metals", mat);
+  mat = getRecyclables("paper", mat);
+  mat = getRecyclables("plastics", mat);
+  mat = getRecyclables("electronics", mat);
+  mat = getRecyclables("mat-other", mat);
 
-  document.write("address: " + address1 + " " + address2 +"<br>");
-  document.write("city: " + city + "<br>");
-  document.write("state: " + state + "<br>");
-  document.write("zip: " + zip + "<br>");}
+
+  document.write("Address: " + address1 + " " + address2 +"<br>");
+  document.write("City: " + city + "<br>");
+  document.write("State: " + state + "<br>");
+  document.write("Zip: " + zip + "<br>");
+  document.write("End data: " + data + "<br>" );
+  document.write("Materials: " + mat + "<br>");
+  document.write("Notes: " + notes + "<br>");
+
+
+
+
+}
+
 
 function cleanup(s) {
     result = s;
@@ -36,6 +54,17 @@ function cleanup(s) {
       result = result + ' ' + cleanup(s.substring(idx + 1, s.length));
     }
     return result;
+}
+
+function getRecyclables(p, s){
+  if (params[p] == 'on') {
+    s = s + p + " ";
+
+  }
+  else if (params[p] != undefined) {
+    s = s + " and " +cleanup(unescape(params[p])) + " ";
+  }
+  return s;
 }
 
 var map;
