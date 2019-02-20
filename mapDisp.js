@@ -36,7 +36,7 @@ function write() {
   document.write("City: " + city + "<br>");
   document.write("State: " + state + "<br>");
   document.write("Zip: " + zip + "<br>");
-  document.write("End data: " + data + "<br>" );
+  document.write("End Date: " + data + "<br>" );
   document.write("Materials: " + mat + "<br>");
   document.write("Notes: " + notes + "<br>");
 
