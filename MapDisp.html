@@ -1,31 +1,48 @@
-<html>
-    <head>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
         <title> Map disp</title>
         <meta name="viewport" content="initial-scale=1.0">
         <meta charset="utf-8">
-        <style>
-           #map {
-             height: 100%;
-             margin-bottom: 80px;
-             border-radius: 50px;
-             border: 10px solid #245b96;
-             width: 50%;
-           }
-          html, body {
-            height: 50%;
-            margin: 0;
-            padding: 0;
-          }
-        </style>
+		<link rel="stylesheet" type="text/css" href="w3.css">
+		<link rel="stylesheet" type="text/css" href="styles.css"/>
     </head>
     <script src = "mapDisp.js"></script>
     <body>
-        <h1>Drop point created!</h1>
+	  <header class="header-bar">
+		  <h2>Changing Recycling Behavior</h2>
+	  </header>
+	  <div class="w3-bar w3-dark-green">
+		<a href="#" class="w3-bar-item w3-button w3-mobile w3-border-right">Home</a>
+		<a href="#" class="w3-bar-item w3-button w3-mobile w3-border-right">How Do I Recycle?</a>
+		<a href="#" class="w3-bar-item w3-button w3-mobile w3-border-right">Recycling Near Me</a>
+		<div class="w3-dropdown-hover">
+		  <button class="w3-button">Community Recycling</button>
+		  <div class="w3-dropdown-content w3-bar-block w3-card-4">
+			<a href="dropCreate.html" class="w3-bar-item w3-button">Create a Drop Point</a>
+			<a href="#" class="w3-bar-item w3-button">Manage My Drop Points</a>
+			<a href="#" class="w3-bar-item w3-button">Find a Drop Point</a>
+		  </div>
+		</div>
+	  </div>
+	  <div>
+		<ul class="breadcrumb">
+		  <li><a href="#">Home</a></li>
+		  <li><a href="#">Community Recycling</a></li>
+		  <li>Create a Drop Point</li>
+		</ul>
+	  </div>
+	  <div>
+        <h3>Drop point created!</h3>
         <script>
           write();
         </script>
         <div id="map"></div>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlof8XhnNat5G2alXVLSzFDTmUNlgEZKw&callback=initMap"
         async defer></script>
+	  </div>
+	  <footer class="footer-bar">
+		<p>&nbsp;</p>
+	  </footer>
     </body>
 </html>
