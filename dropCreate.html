@@ -6,6 +6,9 @@
 	<link rel="stylesheet" type="text/css" href="w3.css">
 	<link rel="stylesheet" type="text/css" href="styles.css"/>
   </head>
+  <script type="text/javascript" href = "dropCreate.js">
+
+  </script>
   <body>
   <header class="header-bar">
 	  <h2>Changing Recycling Behavior</h2>
@@ -38,13 +41,14 @@
 		<fieldset class="input-form">
 		  <legend>Drop Point Information</legend>
 		  <div class="form-label">Address Line 1 *:</div>
-		  <input name="address1" type="text"></br>
+		  <input name="address1" type="text" required></br>
 		  <div class="form-label">Address Line 2:</div>
 		  <input name="address2" type="text"></br>
 		  <div class="form-label">City *:</div>
 		  <input name="city" type="text"></br>
 		  <div class="form-label">State *:</div>
-			<select name="state">
+			<select name="state" required>
+        <option value= "">Choose Your State</option>
 				<option value="AL">AL - Alabama</option>
 				<option value="AK">AK - Alaska</option>
 				<option value="AZ">AZ - Arizona</option>
@@ -98,28 +102,28 @@
 				<option value="WY">WY - Wyoming</option>
 			</select></br>
 		  <div class="form-label">Zip Code *:</div>
-		  <input name="zip" type="text"></br>
+		  <input name="zip" type="text" required></br>
 		  <div class="form-label">Drop Point End Date *:</div>
-		  <input name="endDate" type="date"></br>
+		  <input name="endDate" type="date" required></br>
 		  <div class="form-label">Materials *:</div>
 		  <table>
 		    <tr>
 			  <td>
-				<input name="mat-metals" type="checkbox">
+				<input name="Metals" type="checkbox">
 			    Metals
 			  </td>
 			  <td>
-			    <input name="mat-paper" type="checkbox">
+			    <input name="Paper" type="checkbox">
 			    Paper/Cardboard
 			  </td>
 			</tr>
 			<tr>
 			  <td>
-				<input name="mat-plastics" type="checkbox">
+				<input name="Plastics" type="checkbox">
 				Plastics
 			  </td>
 			  <td>
-				<input name="mat-electronics" type="checkbox">
+				<input name="Electronics" type="checkbox">
 				Electronics
 			  </td>
 			</tr>

@@ -17,16 +17,55 @@ function getParams(){
 
 function write() {
   params = getParams();
-  address1 = unescape(params["address1"]);
-  address2 = unescape(params["address2"]);
-  city = unescape(params["city"]);
+  address1 = cleanup(unescape(params["address1"]));
+  address2 = cleanup(unescape(params["address2"]));
+  city = cleanup(unescape(params["city"]));
   state = unescape(params["state"]);
-  zip = unescape(params["zip"]);
-  document.write("address: " + address1 + " " + address2 +"<br>");
-  document.write("city: " + city + "<br>");
-  document.write("state: " + state + "<br>");
-  document.write("zip: " + zip + "<br>");}
+  zip = cleanup(unescape(params["zip"]));
+  data = cleanup(unescape(params["endDate"]));
+  notes =  cleanup(unescape(params["notes"]));
+  var mat = '';
+  mat = getRecyclables("Metals", mat);
+  mat = getRecyclables("Paper", mat);
+  mat = getRecyclables("Plastics", mat);
+  mat = getRecyclables("Electronics", mat);
+  mat = getRecyclables("mat-other", mat);
 
+
+  document.write("Address: " + address1 + " " + address2 +"<br>");
+  document.write("City: " + city + "<br>");
+  document.write("State: " + state + "<br>");
+  document.write("Zip: " + zip + "<br>");
+  document.write("End Date: " + data + "<br>" );
+  document.write("Materials: " + mat + "<br>");
+  document.write("Notes: " + notes + "<br>");
+
+
+
+
+}
+
+
+function cleanup(s) {
+    result = s;
+    var idx = s.indexOf('+');
+    if (idx != -1){
+      result = s.substring(0, idx);
+      result = result + ' ' + cleanup(s.substring(idx + 1, s.length));
+    }
+    return result;
+}
+
+function getRecyclables(p, s){
+  if (params[p] == 'on') {
+    s = s + p + " ";
+
+  }
+  else if (params[p] != undefined && params[p] != "") {
+    s = s + " and " +cleanup(unescape(params[p])) + " ";
+  }
+  return s;
+}
 
 var map;
 function initMap() {
