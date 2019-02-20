@@ -25,10 +25,10 @@ function write() {
   data = cleanup(unescape(params["endDate"]));
   notes =  cleanup(unescape(params["notes"]));
   var mat = '';
-  mat = getRecyclables("metals", mat);
-  mat = getRecyclables("paper", mat);
-  mat = getRecyclables("plastics", mat);
-  mat = getRecyclables("electronics", mat);
+  mat = getRecyclables("Metals", mat);
+  mat = getRecyclables("Paper", mat);
+  mat = getRecyclables("Plastics", mat);
+  mat = getRecyclables("Electronics", mat);
   mat = getRecyclables("mat-other", mat);
 
 
@@ -61,7 +61,7 @@ function getRecyclables(p, s){
     s = s + p + " ";
 
   }
-  else if (params[p] != undefined) {
+  else if (params[p] != undefined && params[p] != "") {
     s = s + " and " +cleanup(unescape(params[p])) + " ";
   }
   return s;
