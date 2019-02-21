@@ -14,7 +14,7 @@ A data collection form that allows the user to input information on drop point l
 
 An external content integration component that takes in the address information from the form and displays the data on a map by utilizing a Google Maps integration.
 
-Link to Repo:
+Link to Repo: https://github.com/sec68g4-changing-recycling-behavior/changing-recycling-behavior.git
 
 Platform: The latest version of Chrome.
 
