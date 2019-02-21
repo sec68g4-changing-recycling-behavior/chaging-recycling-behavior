@@ -29,6 +29,7 @@ function processFormData() {
   zip = cleanup(unescape(params["zip"]));
   date = new Date(cleanup(unescape(params["endDate"])) + "T12:00:00+0" + (new Date()).getTimezoneOffset()/60 + ":00");
   notes =  cleanup(unescape(params["notes"]));
+
   mat = getRecyclables("Metals", mat);
   mat = getRecyclables("Paper", mat);
   mat = getRecyclables("Plastics", mat);
@@ -80,6 +81,45 @@ function getRecyclables(p, s){
 	if (s != '')
 		s = s + ", and "
     s = s + cleanup(unescape(params[p])) + " ";
+  }
+  return s;
+}
+
+  document.write("Address: " + address1 + " " + address2 +"<br>");
+  document.write("City: " + city + "<br>");
+  document.write("State: " + state + "<br>");
+  document.write("Zip: " + zip + "<br>");
+  document.write("End Date: " + data + "<br>" );
+  document.write("Materials: " + mat + "<br>");
+  document.write("Notes: " + notes + "<br>");
+
+
+
+
+}
+
+
+function cleanup(s) {
+    result = s;
+    var idx = s.indexOf('+');
+    if (idx != -1){
+      result = s.substring(0, idx);
+      result = result + ' ' + cleanup(s.substring(idx + 1, s.length));
+    }
+    return result;
+}
+
+function getRecyclables(p, s){
+  if (params[p] == 'on') {
+    if (s == ''){
+      s = p;
+    }
+    else {
+    s = s +", " + p;}
+
+  }
+  else if (params[p] != undefined && params[p] != "") {
+    s = s + ", and " +cleanup(unescape(params[p])) + " ";
   }
   return s;
 }
