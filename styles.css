@@ -31,7 +31,9 @@ body {
 
 .pageDescription {
 	margin-left: 10px;
+
 	text-align: center;
+
 }
 .footer-bar {
 	height: 25px;
@@ -80,8 +82,24 @@ ul.breadcrumb li a:hover {
 	height: 250px;
 	border-radius: 50px;
 	border: 10px solid #527a4b;
-	width: 800px;
+
+	width: 80%;
 	margin-left: 75px;
+}
+
+#confirmationTable tr td {
+	vertical-align: top;
+}
+
+.formData {
+	padding-left: 10px;
+}
+
+#results{
+		height: 250px;
+		width: 800px;
+		float: center;
+		text-align: center;
 
 }
 

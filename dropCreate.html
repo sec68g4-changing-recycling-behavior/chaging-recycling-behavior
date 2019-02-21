@@ -6,7 +6,8 @@
 	<link rel="stylesheet" type="text/css" href="w3.css">
 	<link rel="stylesheet" type="text/css" href="styles.css"/>
   </head>
-  <script type="text/javascript" href = "dropCreate.js">
+
+  <script type="text/javascript" src="dropCreate.js">
 
   </script>
   <body>
@@ -41,7 +42,9 @@
         <p>Turn recycling into a community effort by creating a Drop Point!</p>
         <p>Drop Points let people in your community know that you're collecting certain recyclable items to take to a recycling facility.</p>
         <p>Let your neighbors know what you're collecting, and when they can drop off items until, and see the impact of your recycling efforts grow!</p></div></br>
-				<form method= "get" action="MapDisp.html">
+
+				<form method= "get" action="MapDisp.html" onsubmit="return validateForm()">
+
 				<fieldset class="input-form">
 					<legend>Drop Point Information</legend>
 					<div class="form-label">Address Line 1 *:</div>
@@ -49,7 +52,9 @@
 					<div class="form-label">Address Line 2:</div>
 					<input name="address2" type="text"></br>
 					<div class="form-label">City *:</div>
-					<input name="city" type="text"></br>
+
+					<input name="city" type="text" required></br>
+
 					<div class="form-label">State *:</div>
 					<select name="state" required>
 						<option value= "">Choose Your State</option>
@@ -106,7 +111,9 @@
 						<option value="WY">WY - Wyoming</option>
 					</select></br>
 					<div class="form-label">Zip Code *:</div>
-					<input name="zip" type="text" required></br>
+
+					<input name="zip" type="text" required pattern="^[0-9]{5}(?:-[0-9]{4})?$"></br>
+
 					<div class="form-label">Drop Point End Date *:</div>
 					<input name="endDate" type="date" required></br>
 					<div class="form-label">Materials *:</div>
