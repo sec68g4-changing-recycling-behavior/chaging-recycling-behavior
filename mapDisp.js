@@ -58,11 +58,15 @@ function cleanup(s) {
 
 function getRecyclables(p, s){
   if (params[p] == 'on') {
-    s = s + p + " ";
+    if (s == ''){
+      s = p;
+    }
+    else {
+    s = s +", " + p;}
 
   }
   else if (params[p] != undefined && params[p] != "") {
-    s = s + " and " +cleanup(unescape(params[p])) + " ";
+    s = s + ", and " +cleanup(unescape(params[p])) + " ";
   }
   return s;
 }
