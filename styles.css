@@ -1,15 +1,37 @@
 
 body {
 	font-family: Arial;
+	margin-left: 15%;
+	margin-right: 15%;
+	margin-top: 3%;
+	background-image: url('image/50-Beautiful-and-Minimalist-Presentation-Backgrounds-037.jpg')
 }
 
+.header-bar img {
+	float: left;
+	height: 60px;
+	width: 60px;
+	margin-right: 10px;
+}
+
+.mainbody {
+	background-color: #f2f9f4;
+}
 .header-bar {
+	position: relative;
 	height: 75px;
 	background-color: #d9f7d4;
 	color: #527a4b;
 	padding: 5px 15px 5px 15px;
 }
 
+.pageTitle {
+	margin-left: 6px;
+}
+
+.pageDescription {
+	margin-left: 10px;
+}
 .footer-bar {
 	height: 25px;
 	background-color: #d9f7d4;
@@ -57,7 +79,8 @@ ul.breadcrumb li a:hover {
 	height: 250px;
 	border-radius: 50px;
 	border: 10px solid #527a4b;
-	width: 500px;
+	width: 800px;
+	margin-left: 37px;
 }
 
 .input-form {

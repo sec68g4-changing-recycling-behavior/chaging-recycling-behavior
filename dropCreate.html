@@ -10,138 +10,141 @@
 
   </script>
   <body>
-  <header class="header-bar">
-	  <h2>Changing Recycling Behavior</h2>
-  </header>
-  <div class="w3-bar w3-dark-green">
-	<a href="#" class="w3-bar-item w3-button w3-mobile w3-border-right">Home</a>
-	<a href="#" class="w3-bar-item w3-button w3-mobile w3-border-right">How Do I Recycle?</a>
-	<a href="#" class="w3-bar-item w3-button w3-mobile w3-border-right">Recycling Near Me</a>
-    <div class="w3-dropdown-hover">
-	  <button class="w3-button">Community Recycling</button>
-	  <div class="w3-dropdown-content w3-bar-block w3-card-4">
-	    <a href="dropCreate.html" class="w3-bar-item w3-button">Create a Drop Point</a>
-	    <a href="#" class="w3-bar-item w3-button">Manage My Drop Points</a>
-	    <a href="#" class="w3-bar-item w3-button">Find a Drop Point</a>
-	  </div>
-    </div>
-  </div>
-  <div>
-	<ul class="breadcrumb">
-	  <li><a href="#">Home</a></li>
-	  <li><a href="#">Community Recycling</a></li>
-	  <li>Create a Drop Point</li>
-	</ul>
-  </div>
-  <div>
-	  <h3>Create a Drop Point</h3>
-	  <p>Turn recycling into a community effort by creating a Drop Point! Drop Points let people in your community know that you're collecting certain recyclable items to take to a recycling facility.
-	  Let your neighbors know what you're collecting, and when they can drop off items until, and see the impact of your recycling efforts grow!</p></br>
-	  <form method= "get" action="MapDisp.html">
-		<fieldset class="input-form">
-		  <legend>Drop Point Information</legend>
-		  <div class="form-label">Address Line 1 *:</div>
-		  <input name="address1" type="text" required></br>
-		  <div class="form-label">Address Line 2:</div>
-		  <input name="address2" type="text"></br>
-		  <div class="form-label">City *:</div>
-		  <input name="city" type="text"></br>
-		  <div class="form-label">State *:</div>
-			<select name="state" required>
-        <option value= "">Choose Your State</option>
-				<option value="AL">AL - Alabama</option>
-				<option value="AK">AK - Alaska</option>
-				<option value="AZ">AZ - Arizona</option>
-				<option value="AR">AR - Arkansas</option>
-				<option value="CA">CA - California</option>
-				<option value="CO">CO - Colorado</option>
-				<option value="CT">CT - Connecticut</option>
-				<option value="DE">DE - Delaware</option>
-				<option value="DC">DC - District Of Columbia</option>
-				<option value="FL">FL - Florida</option>
-				<option value="GA">GA - Georgia</option>
-				<option value="HI">HI - Hawaii</option>
-				<option value="ID">ID - Idaho</option>
-				<option value="IL">IL - Illinois</option>
-				<option value="IN">IN - Indiana</option>
-				<option value="IA">IA - Iowa</option>
-				<option value="KS">KA - Kansas</option>
-				<option value="KY">KY - Kentucky</option>
-				<option value="LA">LA - Louisiana</option>
-				<option value="ME">ME - Maine</option>
-				<option value="MD">MD - Maryland</option>
-				<option value="MA">MA - Massachusetts</option>
-				<option value="MI">MI - Michigan</option>
-				<option value="MN">MN - Minnesota</option>
-				<option value="MS">MS - Mississippi</option>
-				<option value="MO">MO - Missouri</option>
-				<option value="MT">MO - Montana</option>
-				<option value="NE">NE - Nebraska</option>
-				<option value="NV">NV - Nevada</option>
-				<option value="NH">NH - New Hampshire</option>
-				<option value="NJ">NJ - New Jersey</option>
-				<option value="NM">NM - New Mexico</option>
-				<option value="NY">NY - New York</option>
-				<option value="NC">NC - North Carolina</option>
-				<option value="ND">ND - North Dakota</option>
-				<option value="OH">OH - Ohio</option>
-				<option value="OK">OK - Oklahoma</option>
-				<option value="OR">OR - Oregon</option>
-				<option value="PA">PA - Pennsylvania</option>
-				<option value="RI">RI - Rhode Island</option>
-				<option value="SC">SC - South Carolina</option>
-				<option value="SD">SD - South Dakota</option>
-				<option value="TN">TN - Tennessee</option>
-				<option value="TX">TX - Texas</option>
-				<option value="UT">UT - Utah</option>
-				<option value="VT">VT - Vermont</option>
-				<option value="VA">VA - Virginia</option>
-				<option value="WA">WA - Washington</option>
-				<option value="WV">WV - West Virginia</option>
-				<option value="WI">WI - Wisconsin</option>
-				<option value="WY">WY - Wyoming</option>
-			</select></br>
-		  <div class="form-label">Zip Code *:</div>
-		  <input name="zip" type="text" required></br>
-		  <div class="form-label">Drop Point End Date *:</div>
-		  <input name="endDate" type="date" required></br>
-		  <div class="form-label">Materials *:</div>
-		  <table>
-		    <tr>
-			  <td>
-				<input name="Metals" type="checkbox">
-			    Metals
-			  </td>
-			  <td>
-			    <input name="Paper" type="checkbox">
-			    Paper/Cardboard
-			  </td>
-			</tr>
-			<tr>
-			  <td>
-				<input name="Plastics" type="checkbox">
-				Plastics
-			  </td>
-			  <td>
-				<input name="Electronics" type="checkbox">
-				Electronics
-			  </td>
-			</tr>
-			<tr>
-			  <td colspan="2">
-				Other (please specify)
-				<input name="mat-other" type="text">
-			  </td>
-			</tr>
-		  </table>
-		  <div class="form-label">Note to Recyclers:</div>
-		  <textarea name="notes" rows="5" cols="50"></textarea></br>
-		  <input type= "submit" value= "Submit">
-		</fieldset>
-	  </form>
-  </div>
-  <footer class="footer-bar">
-    <p>&nbsp;</p>
-  </footer>
+		<div class="mainbody">
+			<header class="header-bar">
+				<img src="image/recycle_PNG2.png" class="logo">
+				<h2>Changing Recycling Behavior</h2>
+			</header>
+			<div class="w3-bar w3-dark-green">
+			<a href="#" class="w3-bar-item w3-button w3-mobile w3-border-right">Home</a>
+			<a href="#" class="w3-bar-item w3-button w3-mobile w3-border-right">How Do I Recycle?</a>
+			<a href="#" class="w3-bar-item w3-button w3-mobile w3-border-right">Recycling Near Me</a>
+				<div class="w3-dropdown-hover">
+				<button class="w3-button">Community Recycling</button>
+				<div class="w3-dropdown-content w3-bar-block w3-card-4">
+					<a href="dropCreate.html" class="w3-bar-item w3-button">Create a Drop Point</a>
+					<a href="#" class="w3-bar-item w3-button">Manage My Drop Points</a>
+					<a href="#" class="w3-bar-item w3-button">Find a Drop Point</a>
+				</div>
+				</div>
+			</div>
+			<div>
+			<ul class="breadcrumb">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Community Recycling</a></li>
+				<li>Create a Drop Point</li>
+			</ul>
+			</div>
+			<div>
+				<h3 class="pageTitle">Create a Drop Point</h3>
+				<div class="pageDescription">Turn recycling into a community effort by creating a Drop Point! Drop Points let people in your community know that you're collecting certain recyclable items to take to a recycling facility.
+				Let your neighbors know what you're collecting, and when they can drop off items until, and see the impact of your recycling efforts grow!</div></br>
+				<form method= "get" action="MapDisp.html">
+				<fieldset class="input-form">
+					<legend>Drop Point Information</legend>
+					<div class="form-label">Address Line 1 *:</div>
+					<input name="address1" type="text" required></br>
+					<div class="form-label">Address Line 2:</div>
+					<input name="address2" type="text"></br>
+					<div class="form-label">City *:</div>
+					<input name="city" type="text"></br>
+					<div class="form-label">State *:</div>
+					<select name="state" required>
+						<option value= "">Choose Your State</option>
+						<option value="AL">AL - Alabama</option>
+						<option value="AK">AK - Alaska</option>
+						<option value="AZ">AZ - Arizona</option>
+						<option value="AR">AR - Arkansas</option>
+						<option value="CA">CA - California</option>
+						<option value="CO">CO - Colorado</option>
+						<option value="CT">CT - Connecticut</option>
+						<option value="DE">DE - Delaware</option>
+						<option value="DC">DC - District Of Columbia</option>
+						<option value="FL">FL - Florida</option>
+						<option value="GA">GA - Georgia</option>
+						<option value="HI">HI - Hawaii</option>
+						<option value="ID">ID - Idaho</option>
+						<option value="IL">IL - Illinois</option>
+						<option value="IN">IN - Indiana</option>
+						<option value="IA">IA - Iowa</option>
+						<option value="KS">KA - Kansas</option>
+						<option value="KY">KY - Kentucky</option>
+						<option value="LA">LA - Louisiana</option>
+						<option value="ME">ME - Maine</option>
+						<option value="MD">MD - Maryland</option>
+						<option value="MA">MA - Massachusetts</option>
+						<option value="MI">MI - Michigan</option>
+						<option value="MN">MN - Minnesota</option>
+						<option value="MS">MS - Mississippi</option>
+						<option value="MO">MO - Missouri</option>
+						<option value="MT">MO - Montana</option>
+						<option value="NE">NE - Nebraska</option>
+						<option value="NV">NV - Nevada</option>
+						<option value="NH">NH - New Hampshire</option>
+						<option value="NJ">NJ - New Jersey</option>
+						<option value="NM">NM - New Mexico</option>
+						<option value="NY">NY - New York</option>
+						<option value="NC">NC - North Carolina</option>
+						<option value="ND">ND - North Dakota</option>
+						<option value="OH">OH - Ohio</option>
+						<option value="OK">OK - Oklahoma</option>
+						<option value="OR">OR - Oregon</option>
+						<option value="PA">PA - Pennsylvania</option>
+						<option value="RI">RI - Rhode Island</option>
+						<option value="SC">SC - South Carolina</option>
+						<option value="SD">SD - South Dakota</option>
+						<option value="TN">TN - Tennessee</option>
+						<option value="TX">TX - Texas</option>
+						<option value="UT">UT - Utah</option>
+						<option value="VT">VT - Vermont</option>
+						<option value="VA">VA - Virginia</option>
+						<option value="WA">WA - Washington</option>
+						<option value="WV">WV - West Virginia</option>
+						<option value="WI">WI - Wisconsin</option>
+						<option value="WY">WY - Wyoming</option>
+					</select></br>
+					<div class="form-label">Zip Code *:</div>
+					<input name="zip" type="text" required></br>
+					<div class="form-label">Drop Point End Date *:</div>
+					<input name="endDate" type="date" required></br>
+					<div class="form-label">Materials *:</div>
+					<table>
+						<tr>
+						<td>
+						<input name="Metals" type="checkbox">
+							Metals
+						</td>
+						<td>
+							<input name="Paper" type="checkbox">
+							Paper/Cardboard
+						</td>
+					</tr>
+					<tr>
+						<td>
+						<input name="Plastics" type="checkbox">
+						Plastics
+						</td>
+						<td>
+						<input name="Electronics" type="checkbox">
+						Electronics
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+						Other (please specify)
+						<input name="mat-other" type="text">
+						</td>
+					</tr>
+					</table>
+					<div class="form-label">Note to Recyclers:</div>
+					<textarea name="notes" rows="5" cols="50"></textarea></br>
+					<input type= "submit" value= "Submit">
+				</fieldset>
+				</form>
+			</div>
+			<footer class="footer-bar">
+				<p>&nbsp;</p>
+			</footer>
+		</div>
   </body>
 </html>
