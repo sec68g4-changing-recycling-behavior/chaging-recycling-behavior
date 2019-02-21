@@ -1,6 +1,11 @@
-var address;
+var address1;
+var address2;
 var city;
 var state;
+var zip;
+var date;
+var notes;
+var mat = "";
 
 function getParams(){
     var idx = document.URL.indexOf('?');
@@ -15,18 +20,69 @@ function getParams(){
     return params;
 }
 
-function write() {
+function processFormData() {
   params = getParams();
-  address1 = unescape(params["address1"]);
-  address2 = unescape(params["address2"]);
-  city = unescape(params["city"]);
+  address1 = cleanup(unescape(params["address1"]));
+  address2 = cleanup(unescape(params["address2"]));
+  city = cleanup(unescape(params["city"]));
   state = unescape(params["state"]);
-  zip = unescape(params["zip"]);
-  document.write("address: " + address1 + " " + address2 +"<br>");
-  document.write("city: " + city + "<br>");
-  document.write("state: " + state + "<br>");
-  document.write("zip: " + zip + "<br>");}
+  zip = cleanup(unescape(params["zip"]));
+  date = new Date(cleanup(unescape(params["endDate"])) + "T12:00:00+0" + (new Date()).getTimezoneOffset()/60 + ":00");
+  notes =  cleanup(unescape(params["notes"]));
+  mat = getRecyclables("Metals", mat);
+  mat = getRecyclables("Paper", mat);
+  mat = getRecyclables("Plastics", mat);
+  mat = getRecyclables("Electronics", mat);
+  mat = getRecyclables("mat-other", mat);
 
+  if (address2 == "")
+	document.getElementById("formAddress").innerHTML = address1;
+  else
+	document.getElementById("formAddress").innerHTML = address1 + "</br>" + address2;
+  document.getElementById("formCity").innerHTML = city;
+  document.getElementById("formState").innerHTML = state;
+  document.getElementById("formZip").innerHTML = zip;
+  document.getElementById("formEndDate").innerHTML = date.toLocaleDateString();
+  document.getElementById("formMaterials").innerHTML = mat;
+  document.getElementById("formNotes").innerHTML = notes;
+/*  document.write("Address: " + address1 + " " + address2 +"<br>");
+  document.write("City: " + city + "<br>");
+  document.write("State: " + state + "<br>");
+  document.write("Zip: " + zip + "<br>");
+  document.write("End Date: " + data + "<br>" );
+  document.write("Materials: " + mat + "<br>");
+  document.write("Notes: " + notes + "<br>"); */
+  
+  initMap();
+}
+
+
+function cleanup(s) {
+    result = s;
+    var idx = s.indexOf('+');
+    if (idx != -1){
+      result = s.substring(0, idx);
+      result = result + ' ' + cleanup(s.substring(idx + 1, s.length));
+    }
+    return result;
+}
+
+function getRecyclables(p, s){
+  if (params[p] == 'on') {
+    if (s == ''){
+      s = p;
+    }
+    else {
+    s = s +", " + p;}
+
+  }
+  else if (params[p] != undefined && params[p] != "") {
+	if (s != '')
+		s = s + ", and "
+    s = s + cleanup(unescape(params[p])) + " ";
+  }
+  return s;
+}
 
 var map;
 function initMap() {
@@ -37,6 +93,7 @@ function initMap() {
 
   var geocoder = new google.maps.Geocoder();
   var a = address1 + " " + address2 + " " + city + " " + state + " " + zip;
+
   geocoder.geocode({'address': a}, function(results, status) {
   if (status === 'OK') {
     map.setCenter(results[0].geometry.location);

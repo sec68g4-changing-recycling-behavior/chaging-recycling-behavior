@@ -8,41 +8,77 @@
 		<link rel="stylesheet" type="text/css" href="styles.css"/>
     </head>
     <script src = "mapDisp.js"></script>
-    <body>
-	  <header class="header-bar">
-		  <h2>Changing Recycling Behavior</h2>
-	  </header>
-	  <div class="w3-bar w3-dark-green">
-		<a href="#" class="w3-bar-item w3-button w3-mobile w3-border-right">Home</a>
-		<a href="#" class="w3-bar-item w3-button w3-mobile w3-border-right">How Do I Recycle?</a>
-		<a href="#" class="w3-bar-item w3-button w3-mobile w3-border-right">Recycling Near Me</a>
-		<div class="w3-dropdown-hover">
-		  <button class="w3-button">Community Recycling</button>
-		  <div class="w3-dropdown-content w3-bar-block w3-card-4">
-			<a href="dropCreate.html" class="w3-bar-item w3-button">Create a Drop Point</a>
-			<a href="#" class="w3-bar-item w3-button">Manage My Drop Points</a>
-			<a href="#" class="w3-bar-item w3-button">Find a Drop Point</a>
-		  </div>
+    <body onload="processFormData()">
+		<div class="mainbody">
+			<header class="header-bar">
+				<img src="image/recycle_PNG2.png">
+				<h2 class="title">Changing Recycling Behavior</h2>
+			</header>
+			<div class="w3-bar w3-dark-green">
+			<a href="#" class="w3-bar-item w3-button w3-mobile w3-border-right">Home</a>
+			<a href="#" class="w3-bar-item w3-button w3-mobile w3-border-right">How Do I Recycle?</a>
+			<a href="#" class="w3-bar-item w3-button w3-mobile w3-border-right">Recycling Near Me</a>
+			<div class="w3-dropdown-hover">
+				<button class="w3-button">Community Recycling</button>
+				<div class="w3-dropdown-content w3-bar-block w3-card-4">
+				<a href="dropCreate.html" class="w3-bar-item w3-button">Create a Drop Point</a>
+				<!-- <a href="#" class="w3-bar-item w3-button">Manage My Drop Points</a>
+				<a href="#" class="w3-bar-item w3-button">Find a Drop Point</a> -->
+				</div>
+			</div>
+			</div>
+			<div>
+			<ul class="breadcrumb">
+				<li><a href="#">Home</a></li>
+				<li><a href="#">Community Recycling</a></li>
+				<li><a href="dropCreate.html">Create a Drop Point</a></li>
+				<li>Confirmation</li>
+			</ul>
+			</div>
+			<div>
+				<h3 class="pageTitle">Drop point created!</h3>
+			</div>
+			<div class="pageDescription">
+				<p>You have successfully created a drop point! The details of your drop point are:</p>
+				<p>
+					<table id="confirmationTable">
+						<tr>
+							<td>Address:</td>
+							<td class="formData" id="formAddress"></td>
+						</tr>
+						<tr>
+							<td>City:</td>
+							<td class="formData" id="formCity"></td>
+						</tr>
+						<tr>
+							<td>State:</td>
+							<td class="formData" id="formState"></td>
+						</tr>
+						<tr>
+							<td>Zip:</td>
+							<td class="formData" id="formZip"></td>
+						</tr>
+						<tr>
+							<td>Drop Point End Date:</td>
+							<td class="formData" id="formEndDate"></td>
+						</tr>
+						<tr>
+							<td>Materials Accepted:</td>
+							<td class="formData" id="formMaterials"></td>
+						</tr>
+						<tr>
+							<td>Notes to Recyclers:</td>
+							<td class="formData" id="formNotes"></td>
+						</tr>
+					</table>
+				</p>
+				<div id="map"></div>
+				<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlof8XhnNat5G2alXVLSzFDTmUNlgEZKw"
+				async defer></script>
+			</div>
+			<footer class="footer-bar">
+			<p>&nbsp;</p>
+			</footer>
 		</div>
-	  </div>
-	  <div>
-		<ul class="breadcrumb">
-		  <li><a href="#">Home</a></li>
-		  <li><a href="#">Community Recycling</a></li>
-		  <li>Create a Drop Point</li>
-		</ul>
-	  </div>
-	  <div>
-        <h3>Drop point created!</h3>
-        <script>
-          write();
-        </script>
-        <div id="map"></div>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlof8XhnNat5G2alXVLSzFDTmUNlgEZKw&callback=initMap"
-        async defer></script>
-	  </div>
-	  <footer class="footer-bar">
-		<p>&nbsp;</p>
-	  </footer>
     </body>
 </html>
