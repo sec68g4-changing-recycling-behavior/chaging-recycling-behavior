@@ -32,7 +32,7 @@ body {
 .pageDescription {
 	margin-left: 10px;
 
-	text-align: center;
+	text-align: left;
 
 }
 .footer-bar {
@@ -103,12 +103,6 @@ ul.breadcrumb li a:hover {
 
 }
 
-#results{
-		height: 250px;
-		width: 800px;
-		float: center;
-		text-align: center;
-}
 .input-form {
 	width: 200px;
 	margin: auto;
