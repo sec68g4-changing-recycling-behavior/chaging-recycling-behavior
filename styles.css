@@ -1,3 +1,6 @@
+/* 
+	General Site Styling
+*/
 
 body {
 	font-family: Arial;
@@ -17,6 +20,7 @@ body {
 .mainbody {
 	background-color: #f2f9f4;
 }
+
 .header-bar {
 	position: relative;
 	height: 75px;
@@ -31,10 +35,9 @@ body {
 
 .pageDescription {
 	margin-left: 10px;
-
 	text-align: left;
-
 }
+
 .footer-bar {
 	height: 25px;
 	background-color: #d9f7d4;
@@ -77,6 +80,41 @@ ul.breadcrumb li a:hover {
   color: #0b3504;
   text-decoration: underline;
 }
+
+/*
+	infoPage.html styling
+*/
+
+
+.infoGrid {
+	display: grid;
+	height: 100%;
+	width: 100%;
+	grid-template-columns: 40% 40%;
+	grid-template-rows: 40% 40%;
+	justify-content: center;
+}
+
+.infoCard {
+	width: 90%;
+	margin: 2.5%;
+	background-color: #ddffcc;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+	overflow: hidden;
+}
+
+.infoCard:hover {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.cardTitle {
+	padding: 2px 16px;
+}
+
+/*
+	MapDisp.html styling
+*/
 
 #map {
 	height: 250px;

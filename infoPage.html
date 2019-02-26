@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Recycling Help</title>
+	<link rel="stylesheet" type="text/css" href="w3.css">
+	<link rel="stylesheet" type="text/css" href="styles.css"/>
+  </head>
+  <script type="text/javascript" src="infoPage.js">
+  </script>
+  <body>
+		<div class="mainbody">
+			<header class="header-bar">
+				<img src="image/recycle_PNG2.png">
+				<h2 class="title">Changing Recycling Behavior</h2>
+			</header>
+			<div class="w3-bar w3-dark-green">
+			    <a href="#" class="w3-bar-item w3-button w3-mobile w3-border-right">Home</a>
+			    <a href="infoPage.html" class="w3-bar-item w3-button w3-mobile w3-border-right">How Do I Recycle?</a>
+			    <a href="#" class="w3-bar-item w3-button w3-mobile w3-border-right">Recycling Near Me</a>
+				<div class="w3-dropdown-hover">
+				    <button class="w3-button">Community Recycling</button>
+				    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+					    <a href="dropCreate.html" class="w3-bar-item w3-button">Create a Drop Point</a>
+				    </div>
+				</div>
+			</div>
+			<div style="height:70vh">
+                <ul class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="infoPage.html">How Do I Recycle?</a></li>
+                </ul>
+                <br>
+                <div class="infoGrid">
+                    <div class="infoCard" onclick="changePage('plastics')">
+                        <div class="cardTitle">
+                            <h4><b>Plastics</b></h4>
+                            <img style="width:100%;opacity:0.5;margin-top:-5%" src="image/Plastics.png">
+                        </div>
+                    </div>
+                    <div class="infoCard">
+                        <div class="cardTitle">
+                          <h4><b>Metals</b></h4> 
+                        </div>
+                    </div>
+                    <div class="infoCard">
+                        <div class="cardTitle">
+                          <h4><b>Paper Goods</b></h4> 
+                        </div>
+                    </div>
+                    <div class="infoCard">
+                        <div class="cardTitle">
+                          <h4><b>Others</b></h4> 
+                        </div>
+                    </div>
+                </div>
+			</div>
+			<footer class="footer-bar">
+				<p>&nbsp;</p>
+			</footer>
+		</div>
+    </body>
+</html>
