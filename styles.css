@@ -97,6 +97,7 @@ ul.breadcrumb li a:hover {
 
 .infoCard {
 	width: 90%;
+	height:90%;
 	margin: 2.5%;
 	background-color: #ddffcc;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -110,6 +111,13 @@ ul.breadcrumb li a:hover {
 
 .cardTitle {
 	padding: 2px 16px;
+}
+
+.infoImage {
+	width:100%;
+	height:auto;
+	opacity:0.5;
+	margin-top:-3%;
 }
 
 /*

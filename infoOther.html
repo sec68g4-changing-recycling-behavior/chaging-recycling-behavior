@@ -29,32 +29,32 @@
                 <ul class="breadcrumb">
                     <li><a href="#">Home</a></li>
                     <li><a href="infoPage.html">How Do I Recycle?</a></li>
-                    <li><a href="infoPaper.html">Paper Goods</a></li>
+                    <li><a href="infoOther.html">Other Items</a></li>
                 </ul>
                 <br>
                 <div class="infoGrid">
-                    <div class="infoCard" onclick="changePage('cardboard')">
+                    <div class="infoCard" onclick="changePage('batteries')" onmouseover="increaseOpacity('img_batteries')" onmouseout="decreaseOpacity('img_batteries')">
                         <div class="cardTitle">
-                            <h4><b>Cardboard</b></h4> 
-                            <img style="width:100%;opacity:0.5;margin-top:-5%" src="image/cardbox.png">
+                            <h4><b>Batteries</b></h4> 
+                            <img class="infoImage" src="image/batteries.png" id="img_batteries">
                         </div>
                     </div>
-                    <div class="infoCard" onclick="changePage('officepaper')">
+                    <div class="infoCard" onclick="changePage('electronics')" onmouseover="increaseOpacity('img_electronics')" onmouseout="decreaseOpacity('img_electronics')">
                         <div class="cardTitle">
-                          <h4><b>Office paper</b></h4> 
-                          <img style="width:100%;opacity:0.5;margin-top:-5%" src="image/officepaper.png">
+                          <h4><b>Household Electronics</b></h4> 
+                          <img class="infoImage" src="image/electronics.png" id="img_electronics">
                         </div>
                     </div>
-                    <div class="infoCard" onclick="changePage('magazine')">
+                    <div class="infoCard" onclick="changePage('bulbs')" onmouseover="increaseOpacity('img_lightbulbs')" onmouseout="decreaseOpacity('img_lightbulbs')">
                         <div class="cardTitle">
-                          <h4><b>Magazines</b></h4> 
-                          <img style="width:100%;opacity:0.5;margin-top:-5%" src="image/magazine.png">
+                          <h4><b>Light Bulbs</b></h4> 
+                          <img class="infoImage" src="image/recycle-bulbs.png" id="img_lightbulbs">
                         </div>
                     </div>
-                    <div class="infoCard" onclick="changePage('paperother')">
+                    <div class="infoCard" onclick="changePage('otherother')" onmouseover="increaseOpacity('img_bin')" onmouseout="decreaseOpacity('img_bin')">
                         <div class="cardTitle">
-                          <h4><b>Others</b></h4> 
-                          <img style="width:100%;opacity:0.5;margin-top:-5%" src="image/other.png">
+                          <h4><b>Other Items</b></h4> 
+                          <img class="infoImage" src="image/recycling-bin-small.png" id="img_bin">
                         </div>
                     </div>
                 </div>
