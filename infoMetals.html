@@ -6,8 +6,7 @@
 	<link rel="stylesheet" type="text/css" href="w3.css">
 	<link rel="stylesheet" type="text/css" href="styles.css"/>
   </head>
-  <script type="text/javascript" src="infoPage.js">
-  </script>
+  <script type="text/javascript" src="infoPage.js"></script>
   <body>
 		<div class="mainbody">
 			<header class="header-bar">
@@ -29,31 +28,32 @@
                 <ul class="breadcrumb">
                     <li><a href="#">Home</a></li>
                     <li><a href="infoPage.html">How Do I Recycle?</a></li>
+                    <li><a href="infoMetals.html">Metals</a></li>
                 </ul>
                 <br>
                 <div class="infoGrid">
-                    <div class="infoCard" onclick="changePage('plastics')">
+                    <div class="infoCard" onclick="changePage('metalId')">
                         <div class="cardTitle">
-                            <h4><b>Plastics</b></h4>
-                            <img style="width:100%;opacity:0.5;margin-top:-5%" src="image/Plastics.png">
+                            <h4><b>Identify Your Metals</b></h4>
+                            <img style="width:60%; margin-left: 60px;opacity:0.5; margin-top:-0%" src="image/Metals.png">
                         </div>
                     </div>
-                    <div class="infoCard" onclick= "changePage('metals')">
+                    <div class="infoCard" onclick="changePage('cans')">
                         <div class="cardTitle">
-
-                          <h4><b>Metals</b></h4>
+                          <h4><b>Cans and Bottles</b></h4>
                           <img style="width:100%;opacity:0.5;margin-top:-5%" src="image/Cans.png">
                         </div>
                     </div>
-                    <div class="infoCard" onclick="changePage('papers')">
-                        <div class="cardTitle" >
-                          <h4><b>Paper Goods</b></h4>
-                          <img style="width:100%;opacity:0.5;margin-top:-5%" src="image/skr.png">
+                    <div class="infoCard">
+                        <div class="cardTitle" onclick="changePage('scraps')">
+                          <h4><b>Scraps</b></h4>
+                          <img style="width:90%; margin-left: 15px;opacity:0.5;margin-top:-20%" src="image/infoMetals.png">
                         </div>
                     </div>
                     <div class="infoCard">
-                        <div class="cardTitle">
-                          <h4><b>Others</b></h4>
+                        <div class="cardTitle" onclick ="changePage('radio')">
+                          <h4><b>Unrecyclables</b></h4>
+                          <img style="width:100%;opacity:0.5;margin-top:-10%" src="image/Radio.png">
                         </div>
                     </div>
                 </div>
