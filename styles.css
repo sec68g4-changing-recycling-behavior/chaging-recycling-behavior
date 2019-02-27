@@ -85,7 +85,6 @@ ul.breadcrumb li a:hover {
 	infoPage.html styling
 */
 
-
 .infoGrid {
 	display: grid;
 	height: 100%;
@@ -113,11 +112,19 @@ ul.breadcrumb li a:hover {
 	padding: 2px 16px;
 }
 
+
+.bgPicture {
+	height: 100%;
+	width: 100%;
+	opacity: 0.1;
+	overflow: hidden;
+}
 .infoImage {
 	width:100%;
 	height:auto;
 	opacity:0.5;
 	margin-top:-3%;
+
 }
 
 /*
@@ -168,8 +175,7 @@ ul.breadcrumb li a:hover {
 	width: 800px;
 	margin: auto;
 	text-align: left;
-  position: relative;
-
+  	position: relative;
 }
 
 .text{
@@ -180,5 +186,4 @@ ul.breadcrumb li a:hover {
 	left: 1px;
 	font-size: 17px;
 	overflow: auto;
-
 }

@@ -6,7 +6,15 @@ function changePage(page) {
         case 'bottles':
             window.location = ("infoBottles.html");
             break;
-
+        case 'bags':
+            window.location = ("infoBags.html");
+            break;
+        case 'packaging':
+            window.location = ("infoPackaging.html");
+            break;
+        case 'plasticOther':
+            window.location = ("infoPlasticOther.html");
+            break;
         case 'metals':
             window.location = ("infoMetals.html");
             break;
@@ -52,7 +60,6 @@ function changePage(page) {
         case 'misc':
             window.location = ("infoOtherMisc.html");
             break;
-
     }
 }
 
