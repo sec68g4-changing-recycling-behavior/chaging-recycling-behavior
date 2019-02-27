@@ -32,28 +32,28 @@
                 </ul>
                 <br>
                 <div class="infoGrid">
-                    <div class="infoCard" onclick="changePage('plastics')">
+                    <div class="infoCard" onclick="changePage('plastics')" onmouseover="increaseOpacity('img_plastics')" onmouseout="decreaseOpacity('img_plastics')">
                         <div class="cardTitle">
                             <h4><b>Plastics</b></h4>
-                            <img style="width:100%;opacity:0.5;margin-top:-5%" src="image/Plastics.png">
+                            <img class="infoImage" src="image/Plastics.png" id="img_plastics">
                         </div>
                     </div>
-                    <div class="infoCard" onclick= "changePage('metals')">
+                    <div class="infoCard" onclick= "changePage('metals')" onmouseover="increaseOpacity('img_metals')" onmouseout="decreaseOpacity('img_metals')">
                         <div class="cardTitle">
-
                           <h4><b>Metals</b></h4>
-                          <img style="width:100%;opacity:0.5;margin-top:-5%" src="image/Cans.png">
+                          <img class="infoImage" src="image/Cans.png" id="img_metals">
                         </div>
                     </div>
-                    <div class="infoCard" onclick="changePage('papers')">
+                    <div class="infoCard" onclick="changePage('papers')" onmouseover="increaseOpacity('img_papers')" onmouseout="decreaseOpacity('img_papers')">
                         <div class="cardTitle" >
                           <h4><b>Paper Goods</b></h4>
-                          <img style="width:100%;opacity:0.5;margin-top:-5%" src="image/skr.png">
+                          <img class="infoImage" src="image/skr.png" id="img_papers">
                         </div>
                     </div>
-                    <div class="infoCard">
+                    <div class="infoCard" onclick="changePage('other')" onmouseover="increaseOpacity('img_other')" onmouseout="decreaseOpacity('img_other')">
                         <div class="cardTitle">
-                          <h4><b>Others</b></h4>
+                          <h4><b>Other Items</b></h4>
+                          <img class="infoImage" src="image/is_it_recyclable.jpg" id="img_other">
                         </div>
                     </div>
                 </div>

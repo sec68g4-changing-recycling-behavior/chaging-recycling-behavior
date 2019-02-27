@@ -44,6 +44,29 @@ function changePage(page) {
             break;
         case 'paperother':
             window.location = ("infoPaperOther.html");
+			break;
+        case 'other':
+            window.location = ("infoOther.html");
+            break;
+        case 'batteries':
+            window.location = ("infoBatteries.html");
+            break;
+        case 'electronics':
+            window.location = ("infoElectronics.html");
+            break;
+        case 'bulbs':
+            window.location = ("infoBulbs.html");
+            break;
+        case 'misc':
+            window.location = ("infoOtherMisc.html");
             break;
     }
+}
+
+function increaseOpacity(item) {
+	document.getElementById(item).style.opacity = 1;
+}
+
+function decreaseOpacity(item) {
+	document.getElementById(item).style.opacity = 0.5;
 }

@@ -96,6 +96,7 @@ ul.breadcrumb li a:hover {
 
 .infoCard {
 	width: 90%;
+	height:90%;
 	margin: 2.5%;
 	background-color: #ddffcc;
 	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -111,11 +112,19 @@ ul.breadcrumb li a:hover {
 	padding: 2px 16px;
 }
 
+
 .bgPicture {
 	height: 100%;
 	width: 100%;
 	opacity: 0.1;
 	overflow: hidden;
+}
+.infoImage {
+	width:100%;
+	height:auto;
+	opacity:0.5;
+	margin-top:-3%;
+
 }
 
 /*
@@ -123,6 +132,15 @@ ul.breadcrumb li a:hover {
 */
 
 #map {
+	height: 250px;
+	border-radius: 50px;
+	border: 10px solid #527a4b;
+
+	width: 80%;
+	margin-left: 75px;
+}
+
+#smallMap {
 	height: 250px;
 	border-radius: 50px;
 	border: 10px solid #527a4b;
