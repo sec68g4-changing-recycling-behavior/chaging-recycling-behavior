@@ -133,6 +133,15 @@ ul.breadcrumb li a:hover {
 	margin-left: 75px;
 }
 
+#smallMap {
+	height: 250px;
+	border-radius: 50px;
+	border: 10px solid #527a4b;
+
+	width: 80%;
+	margin-left: 75px;
+}
+
 #confirmationTable tr td {
 	vertical-align: top;
 }

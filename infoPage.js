@@ -49,8 +49,8 @@ function changePage(page) {
         case 'bulbs':
             window.location = ("infoBulbs.html");
             break;
-        case 'otherother':
-            window.location = ("infoOtherOther.html");
+        case 'misc':
+            window.location = ("infoOtherMisc.html");
             break;
 
     }

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Recycling Help</title>
+	<link rel="stylesheet" type="text/css" href="w3.css">
+	<link rel="stylesheet" type="text/css" href="styles.css"/>
+  </head>
+  <script src = "mapDisp.js"></script>
+  <body onLoad="showClosestCenter()">
+		<div class="mainbody">
+			<header class="header-bar">
+				<img src="image/recycle_PNG2.png">
+				<h2 class="title">Changing Recycling Behavior</h2>
+			</header>
+			<div class="w3-bar w3-dark-green">
+			    <a href="#" class="w3-bar-item w3-button w3-mobile w3-border-right">Home</a>
+			    <a href="infoPage.html" class="w3-bar-item w3-button w3-mobile w3-border-right">How Do I Recycle?</a>
+			    <a href="#" class="w3-bar-item w3-button w3-mobile w3-border-right">Recycling Near Me</a>
+				<div class="w3-dropdown-hover">
+				    <button class="w3-button">Community Recycling</button>
+				    <div class="w3-dropdown-content w3-bar-block w3-card-4">
+					    <a href="dropCreate.html" class="w3-bar-item w3-button">Create a Drop Point</a>
+				    </div>
+				</div>
+			</div>
+			<div>
+                <ul class="breadcrumb">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="infoPage.html">How Do I Recycle?</a></li>
+                    <li><a href="infoOther.html">Other Items</a></li>
+                    <li><a href="infoOtherMisc.html">Miscellaneous Items</a></li>
+                </ul>
+                <h1 style= "margin-left: 89px;">Recycling Miscellaneous Items</h1>
+                <div class = "center">
+                    <img style="width:100%; opacity:0.15; margin-top:-10%; float:center" src="image/recycling-bin-small.png">
+                    <div class = "text">
+						<p>Lots of things may be recyclable beyond basic paper, plastic, metals, batteries, and bulbs. Please see below for a list of other, less-common, recyclables. You can also call your local recycling center to ask if they can take the item you're trying to recycle, or maybe know where you can drop it off.</p>
+                        <h2>Your closest recycling center:</h2>
+						<br/>
+						<div>
+							<table width="80%">
+								<tr>
+								<td width="30%">
+								Winnetka Public Works<br/>
+								1390 Willow Road<br/>
+								Winnetka, IL 60093<br/>
+								(847) 716-3588<br/>
+								<a href="https://www.villageofwinnetka.org/departments/public-works/refuse-and-recycling">Website Link</a>
+								</td>
+								<td width="70%">
+									<div id="map">
+									<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlof8XhnNat5G2alXVLSzFDTmUNlgEZKw" async defer></script>
+							</div>
+								</td>
+								</tr>
+							</table>
+						</div>
+						<br/>
+						<div>
+							<p>Materials Accepted: Alkaline ﻿Batteries, Blu-Ray ﻿Players, Cables, CD ﻿Players, Cell ﻿Phone Accessories, Cell ﻿Phones, CFLs, Computer ﻿Peripherals - External, Computer ﻿Peripherals - Internal, CRT ﻿Computer Monitors, CRT ﻿Televisions, Desktop ﻿Computers, DVD ﻿Players, Fluorescent ﻿Tubes, Game ﻿Consoles, Hard ﻿Drives, Home ﻿Electronics, Items ﻿Containing Mercury, Laptop ﻿Computers, LCD ﻿Computer Monitors, LCD ﻿Televisions, Lithium ﻿Batteries, Lithium-ion ﻿Batteries, Mercury ﻿Thermostats, MP3 ﻿Players, Nickel-cadmium ﻿Batteries, Nickel-metal ﻿Hydride Batteries, Nickel-zinc ﻿Batteries, Printers, Receivers, Scanners, String ﻿Lights, Tablets, VCRs, Video ﻿Game Peripherals, Zinc-air ﻿Batteries, Zinc-carbon ﻿Batteries</p>
+						</div>
+						<h3>Miscellaneous Recyclable Items:</h3>
+						<ol>
+							<li><b>CDs/DVDs/Game Disks:</b> Send scratched music or computer CDs, DVDs, and PlayStation or Nintendo video game disks to CDFixers for refinishing, and they’ll work like new.</li>
+							<li><b>Clothes:</b>Wearable clothes can go to your local Goodwill outlet or shelter. Donate wearable women’s business clothing to Dress for Success, which gives them to low-income women as they search for jobs. Offer unwearable clothes and towels to local animal boarding and shelter facilities, which often use them as pet bedding. Consider holding a clothes swap at your office, school, faith congregation or community center. Swap clothes with friends and colleagues, and save money on back-to-school clothes, Halloween costumes, or any season you want.</li>
+							<li><b>Eyeglasses:</b>Your local Lion’s Club or eye care chain may collect these. Lenses are reground and given to people in need. Often eye doctors' offices will collect them, or even local libraries. Glasses are most often donated as-is to someone with a similar perscription. Reading glasses and non-perscription sunglasses can often be donated as well.</li>
+							<li><b>Foam packing:</b>Your local pack-and-ship store will likely accept foam peanuts for reuse. Or, call the Plastic Loose Fill Producers Council to find a drop-off site. For places to drop off foam blocks for recycling, contact the Alliance of Foam Packaging Recyclers.</li>
+							<li><b>Ink/toner cartridges:</b>Recycleplace.org will pay a few cents for your old ink cartridges, up to $1 depending on the brand. If you bring your old cartridges to Staples, they will give you a $2 voucher you can use towards your new ink.</li>
+							<li><b>Oil:</b>When the oil is being changed in your car, it can be re-refined and made into motor lubricants and other petroleum products. Earth911 has a tool to find which autoshops you can use to recycle oil in your zip code.</li>
+							<li><b>Phones:</b>HopeLine is a program to provide cell phones to domestic violence survivors. Bring them to a Verizon or mail them in to donate. Office phones and corded phones can be recycled through Staples or another e-waste recycler.</li>
+							<li><b>Sports equipment</b>Resell or trade it at your local Play It Again Sports outlet or at Goodwill.</li>
+							<li><b>Athletic and other shoes:</b>MORE takes donations of lightly used running shoes which are resold to fund sustainable farming programs. Soles4Souls was founded after Hurricane Katrina, which gives shoes as a measure of disaster relief and to create micro-enterprises with a low cost product.</li>
+							<li><b>Toothbrushes and razors:</b>Buy a recycled plastic toothbrush or razor from Preserve, a brand sold in many pharmacy stores as well as online. The company makes its products out of Stonyfield Farms yogurt cups and will take back its products to be made into plastic lumber. Bins that collect these and other products with the number 5 recycling symbol are collected in Preserve's Gimme 5 bins, which are placed in 250 locations nationwide. They can also be sent in by mail.</li>
+							<li><b>Crayons:</b>If you have broken crayons, or old mis-matched ones that are missing the box, send them to Crazy Crayons. This program collects crayons from around the country, melts them down, and sells 100% recycled crayons (in cute shapes and containers, too!).</li>
+							<li><b>Miscellaneous stuff</b>Get your unwanted items into the hands of people who can use them. Offer them up on your local Freecycle.org or Craigslist.org listserv.</li>
+						</ol>
+                      </div>
+                </div>
+			</div>
+			<footer class="footer-bar">
+				<p>&nbsp;</p>
+			</footer>
+		</div>
+    </body>
+</html>
