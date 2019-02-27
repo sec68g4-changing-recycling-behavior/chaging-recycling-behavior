@@ -1,21 +1,17 @@
-# SEC68G4-Changing-Recycling-Behavior
-
-To start: Please open file dropCreate.html
-
 Sec68 G4 Changing Recycling Behavior
-P6: Computer Prototype 1
+P7: Computer Prototype 2
 
 Task:
 
-The task is for the user to create a drop point, which is a location where the user as well as other members of the community can drop of their recyclable materials and have them taken care of collectively.
+The task for this prototype is for the user to find out how to recycle a particular item by using the data filters on the website.
 
 Components:
 
-A data collection form that allows the user to input information on drop point location, recyclable items and specific date on which the drop point closes and the waste is recycled.
-
-An external content integration component that takes in the address information from the form and displays the data on a map by utilizing a Google Maps integration.
+We implemented a data filter that allows the user to categorically filter information about how to recycle items. This filter is different to conventional data filters (a handful of form inputs on a single page). Our view is that this filter enhances usability by allowing the user to filter through the data in multiple steps.
 
 Link to Repo:
+
+https://github.com/sec68g4-changing-recycling-behavior/changing-recycling-behavior/tree/project_7
 
 
 Platform:
@@ -25,6 +21,8 @@ The latest version of Chrome.
 Design Summary:
 
 
-Our the design on the create drop point feature is sleek, minimalistic, and clear. The site gives out the affordances very clearly to the user: that the sole task is the create a drop point. The forms are designed to be filled in a direct downward fashion so the user would easily follow. The design imposes some constraints to the user so that they can correctly perform the task, certain fields like end dates follow a specific format, and if a user has not filled out all the required fields, he/she will not be able to submit the form. The design gives direct and visible feedback to the user’s input, after the user has filled out all required fields, the website directly guides the user to the completed state where all the filled information along with the map are displayed.
+Our design of the recycling information data filter is different to conventional filters in that it doesn’t use a handful of form inputs to filter data. Rather, it is a progressive filter that allows the user to sort through data categorically until they get to what they are looking for. The affordances of the filter are clear since it requires the user to simply click the picture that best represents the type of information they are looking for. We have also leveraged the principle of feedback by highlighting the item the user hovers over to make their selection absolutely clear. Visibility of where the user is in the search filter is also promoted by the breadcrumb links at the top of the page. These links not only depict where the user is in the search filter, but also allow the user to quickly jump back to a higher-level category if desired. Finally, conceptual models are reinforced by using graphics (as opposed to a normal form-based filter).
 
-We attempted to apply all four graphics design principles described by Williams in our user interface: contrast, repetition, alignment, and proximity. With the idea of contrast in mind, we chose to make the title and navigation bars green and the current page white; this will allow the user to distinguish between the navigation and content components. For repetition, we used consistent font size and styling for our menu and form items, so users can easily tell which section each item belongs to. For alignment, we center-aligned both the form and map so they are nice to look at. Finally, to exploit the principle of proximity, we placed relevant information next to each other e.g. all the navigation buttons are next to each other on the navigation bar, and all the required form information and clustered together in a box.
+We attempted to apply all four graphics design principles described by Williams in our user interface: contrast, repetition, alignment, and proximity. With the idea of contrast in mind, we chose to highlight the user’s filter selection when they move their mouse over a specific item. This allows the user to quickly determine what item he/she is about to select. For repetition, we used consistent sizing and presentation of the filter selections through various depths of filter level, as well as for the information pages that present the information the user ultimately seeks. For alignment, all selections are organized in a well-aligned grid format making it easy to quickly find the information sought.
+
+
