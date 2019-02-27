@@ -20,6 +20,15 @@ function getParams(){
     return params;
 }
 
+function showClosestCenter() {
+  address1 = "1390 Willow Road";
+  city = "Winnetka";
+  state = "IL";
+  zip = "60093";
+  
+  initMap();
+}
+
 function processFormData() {
   params = getParams();
   address1 = cleanup(unescape(params["address1"]));
