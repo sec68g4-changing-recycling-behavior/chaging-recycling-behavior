@@ -38,6 +38,5 @@ function changePage(page) {
             window.location = ("infoPaperOther.html");
             break;
 
-
     }
 }
