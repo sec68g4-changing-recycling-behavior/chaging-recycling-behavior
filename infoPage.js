@@ -64,9 +64,11 @@ function changePage(page) {
 }
 
 function increaseOpacity(item) {
-	document.getElementById(item).style.opacity = 1;
+    document.getElementById(item).style.transition = "opacity 0.3s ease-in";
+    document.getElementById(item).style.opacity = 1;
 }
 
 function decreaseOpacity(item) {
-	document.getElementById(item).style.opacity = 0.5;
+    document.getElementById(item).style.transition = "opacity 0.3s ease-out";
+    document.getElementById(item).style.opacity = 0.5;
 }
