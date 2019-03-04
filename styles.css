@@ -187,3 +187,35 @@ ul.breadcrumb li a:hover {
 	font-size: 17px;
 	overflow: auto;
 }
+
+
+/*recycling near me */
+.main {
+	height: 700px;
+	width: 100%;
+	margin: auto;
+	text-align: left;
+
+}
+
+.sidebar{
+  height: 80%;
+	width: 25%;
+	float: left;
+	background : linear-gradient(to bottom right, white, #107a4b);
+	border: 3px solid #527a4b;
+	border-radius: 10px;
+	position: relative;
+
+}
+
+input[type=submit] {
+    padding:5px 15px;
+    background:#e33;
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    color: white;
+    font-size: larger;
+}
