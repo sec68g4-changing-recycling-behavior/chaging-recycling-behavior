@@ -1,0 +1,41 @@
+#map3 {
+  height: 80%;
+
+  border: 1px solid #527a4b;
+  float: right;
+  width: 75%;
+}
+
+
+ul {
+ list-style-type: none;
+ margin: 0;
+ padding: 0;
+}
+
+li {
+ font: 200 16px Helvetica, Verdana, sans-serif;
+ margin: 0 0 20px 0;
+}
+
+li:last-child {
+ border: none;
+}
+
+li a {
+
+ color: #000;
+ display: block;
+ width: 200px;
+
+ -webkit-transition: font-size 0.3s ease, background-color 0.3s ease;
+ -moz-transition: font-size 0.3s ease, background-color 0.3s ease;
+ -o-transition: font-size 0.3s ease, background-color 0.3s ease;
+ -ms-transition: font-size 0.3s ease, background-color 0.3s ease;
+ transition: font-size 0.3s ease, background-color 0.3s ease;
+}
+
+li a:hover {
+ font-size: 22px;
+
+}

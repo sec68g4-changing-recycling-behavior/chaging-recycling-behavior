@@ -5,16 +5,50 @@ function initMap() {
     zoom: 14
   });
 
-
 }
 var markers = [];
 
 
 function search() {
+  clearMarkers();
+
   var address = document.getElementById("address1").value;
-  var state = document.getElementById("state").value;
+  if (address == "") {
+    document.getElementById("address label").innerHTML = "Please fill in your address";
+    document.getElementById("address label").style.color = "red";
+    return
+  }
+  if (document.getElementById("address label").style.color == "red"){
+  document.getElementById("address label").innerHTML = "Address";
+  document.getElementById("address label").style.color = "#5264AE";}
+
   var city = document.getElementById("city").value;
+  if (city == "") {
+    document.getElementById("city label").innerHTML = "Please fill in your city";
+    document.getElementById("city label").style.color = "red";
+    return
+  }
+  if (document.getElementById("city label").style.color == "red") {
+  document.getElementById("city label").innerHTML = "City";
+  document.getElementById("city label").style.color = "#5264AE";}
+
+  var state = document.getElementById("state").value;
+  if (state == "") {
+    alert("fill in your state");
+    return
+  }
+
   var zip = document.getElementById("zip").value;
+  if (zip == "") {
+    document.getElementById("zip label").innerHTML = "Please fill in your zip code";
+    document.getElementById("zip label").style.color = "red";
+    return
+  }
+  if (   document.getElementById("zip label").style.color == "red") {
+  document.getElementById("zip label").innerHTML = "Zip";
+  document.getElementById("zip label").style.color = "#5264AE";
+
+}
   var geocoder = new google.maps.Geocoder();
   var a = address + " " + city + " " + state + " " + zip;
 
@@ -36,16 +70,16 @@ function search() {
     map.addListener('click', function(){
       infoWindow.close();});
 
+    map.zoom = 12.5;
+
     var service = new google.maps.places.PlacesService(map);
     service.nearbySearch(
       {location: {lat: results[0].geometry.location.lat(), lng: results[0].geometry.location.lng()}, radius: 5000, name: ['recycle']},
       function(results) {
         if (status !== 'OK') return;
-        addMarkers(results);
+        for (var i = 0; i < results.length; i ++) {
+        addMarkers(results[i]);}
       });
-
-
-
   } else {
     alert('Geocode was not successful for the following reason: ' + status);
   }
@@ -54,25 +88,43 @@ function search() {
 
 
 function addMarkers(d) {
-  for (var i = 0; i < d.length; i ++) {
+
 
   var marker = new google.maps.Marker({
     map:map,
-    position: d[i].geometry.location
+    position: d.geometry.location
   });
 
   markers.push(marker);
   var infoWindow = new google.maps.InfoWindow({
-    content: d[i].name
+    content: d.name
   })
 
   infoWindow.open(map, marker);
+
   marker.addListener('click', function(){
   infoWindow.open(map, marker)})
 
   map.addListener('click', function(){
     infoWindow.close();});
-  }
+
 }
 
+function clearMarkers(){
+   markers.forEach(function(marker) {
+     marker.setMap(null);
+   });
+   markers = [];
+}
+
+
+function changeColor() {
+  if (document.getElementById("state").value != ""){
+  document.getElementById("stateLabel").style.fontSize = "20px";
+  document.getElementById("stateLabel").style.color = "#5264AE";}
+  else {
+    document.getElementById("stateLabel").style.fontSize = "18px";
+    document.getElementById("stateLabel").style.color = "black";
+  }
+}
 initMap();
