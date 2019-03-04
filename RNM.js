@@ -14,7 +14,7 @@ function search() {
 
   var address = document.getElementById("address1").value;
   if (address == "") {
-    document.getElementById("address label").innerHTML = "Please fill in your address";
+    document.getElementById("address label").innerHTML = "Fill in your address";
     document.getElementById("address label").style.color = "red";
     return
   }
@@ -24,7 +24,7 @@ function search() {
 
   var city = document.getElementById("city").value;
   if (city == "") {
-    document.getElementById("city label").innerHTML = "Please fill in your city";
+    document.getElementById("city label").innerHTML = "Fill in your city";
     document.getElementById("city label").style.color = "red";
     return
   }
@@ -34,17 +34,25 @@ function search() {
 
   var state = document.getElementById("state").value;
   if (state == "") {
-    alert("fill in your state");
+    document.getElementById("stateLabel").innerHTML = "Fill in your State";
+    document.getElementById("stateLabel").style.color = "red";
     return
   }
 
   var zip = document.getElementById("zip").value;
   if (zip == "") {
-    document.getElementById("zip label").innerHTML = "Please fill in your zip code";
+    document.getElementById("zip label").innerHTML = "Fill in your zip code";
     document.getElementById("zip label").style.color = "red";
     return
   }
-  if (   document.getElementById("zip label").style.color == "red") {
+
+  if (!(/(^\d{5}$)|(^\d{5}-\d{4}$)/.test(zip))){
+    document.getElementById("zip").value = "";
+    document.getElementById("zip label").innerHTML = "Invalid zip code";
+    document.getElementById("zip label").style.color = "red";
+    return
+  };
+  if (document.getElementById("zip label").style.color == "red") {
   document.getElementById("zip label").innerHTML = "Zip";
   document.getElementById("zip label").style.color = "#5264AE";
 
@@ -119,6 +127,7 @@ function clearMarkers(){
 
 
 function changeColor() {
+  document.getElementById("stateLabel").innerHTML = "State";
   if (document.getElementById("state").value != ""){
   document.getElementById("stateLabel").style.fontSize = "20px";
   document.getElementById("stateLabel").style.color = "#5264AE";}
@@ -126,5 +135,11 @@ function changeColor() {
     document.getElementById("stateLabel").style.fontSize = "18px";
     document.getElementById("stateLabel").style.color = "black";
   }
+}
+
+function seText(s, l) {
+  if (document.getElementById(l).style.color == "red"){
+  document.getElementById(l).innerHTML = s;
+  document.getElementById(l).style.color = "#5264AE";}
 }
 initMap();

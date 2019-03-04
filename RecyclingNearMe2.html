@@ -46,14 +46,13 @@
         <h1 class = "pageTitle">Nearby Recycling Centers</h1>
         <div class = "sidebar">
                <div class = "group">
-    					<input id="address1" type="text" required>
-              <label id = "address label">Address</label>
+    					<input id="address1" type="text" onclick = "seText('Address', 'address label')" required>
+              <label id = "address label" >Address</label>
               <br></br>
               </div>
               <div class = "group">
-    					<input id="city" type="text" required>
+    					<input id="city" type="text" onclick = "seText('City', 'city label')" required>
               <label id = "city label">City</label>
-              <br></br>
               </div>
     					<div class="group">
               <p id = "stateLabel" style = "font-size: 18px; color:black; margin-left: 10px; top:10px">State</p>
@@ -114,7 +113,7 @@
               <br></br>
               </div>
     					<div class="group">
-    					<input id="zip" type="text" required pattern="^[0-9]{5}(?:-[0-9]{4})?$">
+    					<input id="zip" type="text" onclick = "seText('Zip', 'zip label')" required pattern="^[0-9]{5}(?:-[0-9]{4})?$">
               <label id = "zip label">Zip<label>
               <br></br>
               </div>
