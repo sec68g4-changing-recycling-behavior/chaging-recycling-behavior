@@ -85,6 +85,13 @@ ul.breadcrumb li a:hover {
 	infoPage.html styling
 */
 
+.instructions {
+	width: 100%;
+	padding-right: 2%;
+	font-size: 2em;
+	text-align: center;
+}
+
 .infoGrid {
 	display: grid;
 	height: 100%;
@@ -112,11 +119,10 @@ ul.breadcrumb li a:hover {
 	padding: 2px 16px;
 }
 
-
 .bgPicture {
 	height: 100%;
 	width: 100%;
-	opacity: 0.1;
+	opacity: 0.3;
 	overflow: hidden;
 }
 .infoImage {
