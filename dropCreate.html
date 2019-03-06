@@ -19,13 +19,19 @@
 			<div class="w3-bar w3-dark-green">
 			<a href="#" class="w3-bar-item w3-button w3-mobile w3-border-right">Home</a>
 			<a href="infoPage.html" class="w3-bar-item w3-button w3-mobile w3-border-right">How Do I Recycle?</a>
-			<a href="#" class="w3-bar-item w3-button w3-mobile w3-border-right">Recycling Near Me</a>
+			<div class="w3-dropdown-hover">
+				<a href = "#"class=" w3-button w3-mobile w3-border-right">Recycling Near Me</a>
+				<div class="w3-dropdown-content w3-bar-block w3-card-4">
+					<a href="RecyclingNearMe2.html" class="w3-bar-item w3-button">Nearby Recycling Centers</a>
+					<a href="RecyclingNearMe.html" class="w3-bar-item w3-button">Recycling in NU</a>
+				</div>
+			</div>
 				<div class="w3-dropdown-hover">
 				<button class="w3-button">Community Recycling</button>
 				<div class="w3-dropdown-content w3-bar-block w3-card-4">
 					<a href="dropCreate.html" class="w3-bar-item w3-button">Create a Drop Point</a>
-					<!-- <a href="#" class="w3-bar-item w3-button">Manage My Drop Points</a>
-					<a href="#" class="w3-bar-item w3-button">Find a Drop Point</a> -->
+					<!-- <a href="#" class="w3-bar-item w3-button">Manage My Drop Points</a>-->
+					<a href="dropFind.html" class="w3-bar-item w3-button">Find a Drop Point</a>
 				</div>
 				</div>
 			</div>
@@ -46,107 +52,119 @@
 				<form method= "get" action="MapDisp.html" onsubmit="return validateForm()">
 
 				<fieldset class="input-form">
-					<legend>Drop Point Information</legend>
-					<div class="form-label">Address Line 1 *:</div>
-					<input name="address1" type="text" required></br>
-					<div class="form-label">Address Line 2:</div>
-					<input name="address2" type="text"></br>
-					<div class="form-label">City *:</div>
-
-					<input name="city" type="text" required></br>
-
-					<div class="form-label">State *:</div>
-					<select name="state" required>
-						<option value= "">Choose Your State</option>
-						<option value="AL">AL - Alabama</option>
-						<option value="AK">AK - Alaska</option>
-						<option value="AZ">AZ - Arizona</option>
-						<option value="AR">AR - Arkansas</option>
-						<option value="CA">CA - California</option>
-						<option value="CO">CO - Colorado</option>
-						<option value="CT">CT - Connecticut</option>
-						<option value="DE">DE - Delaware</option>
-						<option value="DC">DC - District Of Columbia</option>
-						<option value="FL">FL - Florida</option>
-						<option value="GA">GA - Georgia</option>
-						<option value="HI">HI - Hawaii</option>
-						<option value="ID">ID - Idaho</option>
-						<option value="IL">IL - Illinois</option>
-						<option value="IN">IN - Indiana</option>
-						<option value="IA">IA - Iowa</option>
-						<option value="KS">KA - Kansas</option>
-						<option value="KY">KY - Kentucky</option>
-						<option value="LA">LA - Louisiana</option>
-						<option value="ME">ME - Maine</option>
-						<option value="MD">MD - Maryland</option>
-						<option value="MA">MA - Massachusetts</option>
-						<option value="MI">MI - Michigan</option>
-						<option value="MN">MN - Minnesota</option>
-						<option value="MS">MS - Mississippi</option>
-						<option value="MO">MO - Missouri</option>
-						<option value="MT">MO - Montana</option>
-						<option value="NE">NE - Nebraska</option>
-						<option value="NV">NV - Nevada</option>
-						<option value="NH">NH - New Hampshire</option>
-						<option value="NJ">NJ - New Jersey</option>
-						<option value="NM">NM - New Mexico</option>
-						<option value="NY">NY - New York</option>
-						<option value="NC">NC - North Carolina</option>
-						<option value="ND">ND - North Dakota</option>
-						<option value="OH">OH - Ohio</option>
-						<option value="OK">OK - Oklahoma</option>
-						<option value="OR">OR - Oregon</option>
-						<option value="PA">PA - Pennsylvania</option>
-						<option value="RI">RI - Rhode Island</option>
-						<option value="SC">SC - South Carolina</option>
-						<option value="SD">SD - South Dakota</option>
-						<option value="TN">TN - Tennessee</option>
-						<option value="TX">TX - Texas</option>
-						<option value="UT">UT - Utah</option>
-						<option value="VT">VT - Vermont</option>
-						<option value="VA">VA - Virginia</option>
-						<option value="WA">WA - Washington</option>
-						<option value="WV">WV - West Virginia</option>
-						<option value="WI">WI - Wisconsin</option>
-						<option value="WY">WY - Wyoming</option>
-					</select></br>
-					<div class="form-label">Zip Code *:</div>
-
-					<input name="zip" type="text" required pattern="^[0-9]{5}(?:-[0-9]{4})?$"></br>
-
-					<div class="form-label">Drop Point End Date *:</div>
-					<input name="endDate" type="date" required></br>
-					<div class="form-label">Materials *:</div>
-					<table>
+					<legend><h4>Drop Point Information</h4></legend>
+					<div class="form-field">
+						<div class="form-label">Address Line 1 <font color="red">*</font>:</div>
+						<input name="address1" type="text" required></br>
+					</div>
+					<div class="form-field">
+						<div class="form-label-nr">Address Line 2:</div>
+						<input name="address2" type="text"></br>
+					</div>
+					<div class="form-field">
+						<div class="form-label">City <font color="red">*</font>:</div>
+						<input name="city" type="text" required></br>
+					</div>
+					<div class="form-field">
+						<div class="form-label">State <font color="red">*</font>:</div>
+						<select name="state" required>
+							<option value= "">Choose Your State</option>
+							<option value="AL">AL - Alabama</option>
+							<option value="AK">AK - Alaska</option>
+							<option value="AZ">AZ - Arizona</option>
+							<option value="AR">AR - Arkansas</option>
+							<option value="CA">CA - California</option>
+							<option value="CO">CO - Colorado</option>
+							<option value="CT">CT - Connecticut</option>
+							<option value="DE">DE - Delaware</option>
+							<option value="DC">DC - District Of Columbia</option>
+							<option value="FL">FL - Florida</option>
+							<option value="GA">GA - Georgia</option>
+							<option value="HI">HI - Hawaii</option>
+							<option value="ID">ID - Idaho</option>
+							<option value="IL">IL - Illinois</option>
+							<option value="IN">IN - Indiana</option>
+							<option value="IA">IA - Iowa</option>
+							<option value="KS">KA - Kansas</option>
+							<option value="KY">KY - Kentucky</option>
+							<option value="LA">LA - Louisiana</option>
+							<option value="ME">ME - Maine</option>
+							<option value="MD">MD - Maryland</option>
+							<option value="MA">MA - Massachusetts</option>
+							<option value="MI">MI - Michigan</option>
+							<option value="MN">MN - Minnesota</option>
+							<option value="MS">MS - Mississippi</option>
+							<option value="MO">MO - Missouri</option>
+							<option value="MT">MO - Montana</option>
+							<option value="NE">NE - Nebraska</option>
+							<option value="NV">NV - Nevada</option>
+							<option value="NH">NH - New Hampshire</option>
+							<option value="NJ">NJ - New Jersey</option>
+							<option value="NM">NM - New Mexico</option>
+							<option value="NY">NY - New York</option>
+							<option value="NC">NC - North Carolina</option>
+							<option value="ND">ND - North Dakota</option>
+							<option value="OH">OH - Ohio</option>
+							<option value="OK">OK - Oklahoma</option>
+							<option value="OR">OR - Oregon</option>
+							<option value="PA">PA - Pennsylvania</option>
+							<option value="RI">RI - Rhode Island</option>
+							<option value="SC">SC - South Carolina</option>
+							<option value="SD">SD - South Dakota</option>
+							<option value="TN">TN - Tennessee</option>
+							<option value="TX">TX - Texas</option>
+							<option value="UT">UT - Utah</option>
+							<option value="VT">VT - Vermont</option>
+							<option value="VA">VA - Virginia</option>
+							<option value="WA">WA - Washington</option>
+							<option value="WV">WV - West Virginia</option>
+							<option value="WI">WI - Wisconsin</option>
+							<option value="WY">WY - Wyoming</option>
+						</select></br>
+					</div>
+					<div class="form-field">
+						<div class="form-label">Zip Code <font color="red">*</font>:</div>
+						<input name="zip" type="text" required pattern="^[0-9]{5}(?:-[0-9]{4})?$"></br>
+					</div>
+					<div class="form-field">
+						<div class="form-label">Drop Point End Date <font color="red">*</font>:</div>
+						<input name="endDate" type="date" required></br>
+					</div>
+					<div class="form-field">
+						<div class="form-label">Materials <font color="red">*</font>:</div>
+						<table>
+							<tr>
+							<td>
+							<input name="Metals" type="checkbox">
+								Metals
+							</td>
+							<td>
+								<input name="Paper" type="checkbox">
+								Paper/Cardboard
+							</td>
+						</tr>
 						<tr>
-						<td>
-						<input name="Metals" type="checkbox">
-							Metals
-						</td>
-						<td>
-							<input name="Paper" type="checkbox">
-							Paper/Cardboard
-						</td>
-					</tr>
-					<tr>
-						<td>
-						<input name="Plastics" type="checkbox">
-						Plastics
-						</td>
-						<td>
-						<input name="Electronics" type="checkbox">
-						Electronics
-						</td>
-					</tr>
-					<tr>
-						<td colspan="2">
-						Other (please specify)
-						<input name="mat-other" type="text">
-						</td>
-					</tr>
-					</table>
-					<div class="form-label">Note to Recyclers:</div>
-					<textarea name="notes" rows="5" cols="50"></textarea></br>
+							<td>
+							<input name="Plastics" type="checkbox">
+							Plastics
+							</td>
+							<td>
+							<input name="Electronics" type="checkbox">
+							Electronics
+							</td>
+						</tr>
+						<tr>
+							<td colspan="2">
+							Other (please specify)
+							<input name="mat-other" type="text">
+							</td>
+						</tr>
+						</table>
+					</div>
+					<div class="form-field">
+						<div class="form-label-nr">Note to Recyclers:</div>
+						<textarea name="notes" rows="5" cols="50"></textarea></br>
+					</div>
 					<input type= "submit" value= "Submit">
 				</fieldset>
 				</form>
