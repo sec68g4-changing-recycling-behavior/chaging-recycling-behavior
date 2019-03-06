@@ -163,6 +163,26 @@ ul.breadcrumb li a:hover {
 	padding-left: 10px;
 }
 
+.form-field {
+	padding-bottom: 15px;
+}
+
+.filter-form-field {
+	padding-bottom: 15px;
+	padding-right: 10px;
+	position: relative;
+	display: inline-block;
+}
+
+.form-label {
+	font-weight: bold;
+	font-style: italic;
+}
+
+.form-label-nr {
+	font-style: italic;
+}
+
 #results{
 		height: 250px;
 		width: 800px;
@@ -171,9 +191,47 @@ ul.breadcrumb li a:hover {
 
 }
 
+#dropPointResults {
+	display: none;
+}
+
 .input-form {
 	width: 200px;
 	margin: auto;
+}
+
+.filter-form {
+}
+
+th, td {
+	padding: 5px;
+}
+
+table#filter-table {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+#filter-table td {
+	border: 1px solid black;
+	border-collapse: collapse;
+}
+
+table#filter-table tr:nth-child(even) {
+/*	background-color: #d9f7d4;*/
+	background-color: #fff;
+}
+
+table#filter-table tr:nth-child(odd) {
+	background-color: #fff;
+}
+table#filter-table th {
+	background-color: #527a4b;
+	color: white;
+}
+
+.td-center-align {
+	text-align: center;
 }
 
 .center {
