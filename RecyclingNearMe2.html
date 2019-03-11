@@ -25,10 +25,8 @@
       <div class="w3-dropdown-hover">
         <a href = "#"class=" w3-button w3-mobile w3-border-right">Recycling Near Me</a>
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
-        <a href="RecyclingNearMe2.html" class="w3-bar-item w3-button">Nearby Recycling Centers</a>
-        <a href="RecyclingNearMe.html" class="w3-bar-item w3-button">Recycling in NU</a>
-        <!-- <a href="#" class="w3-bar-item w3-button">Manage My Drop Points</a>
-        <a href="#" class="w3-bar-item w3-button">Find a Drop Point</a> -->
+        <a href="RecyclingNearMe2.html" class="w3-bar-item w3-button">Search by Address</a>
+        <a href="RecyclingNearMe.html" class="w3-bar-item w3-button">Search by Recycle Type</a>
       </div>
       </div>
 				<div class="w3-dropdown-hover">
@@ -42,8 +40,13 @@
 			</div>
 
     <div>
+      <ul class="breadcrumb">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Recycling Near Me</a></li>
+          <li>Address Search</li>
+      </ul>
       <div class = "main">
-        <h1 class = "pageTitle">Nearby Recycling Centers</h1>
+        <h1 class = "pageTitle">Address Search</h1>
         <div class = "sidebar">
                <div class = "group">
     					<input id="address1" type="text" onclick = "seText('Address', 'address label')" required>
@@ -55,7 +58,7 @@
               <label id = "city label">City</label>
               </div>
     					<div class="group">
-              <p id = "stateLabel" style = "font-size: 18px; color:black; margin-left: 10px; top:10px">State</p>
+              <br>
     					<select style="margin-left:  10px;" id="state" onchange="changeColor()">
     						<option value= "">State</option>
     						<option value="AL">AL - Alabama</option>

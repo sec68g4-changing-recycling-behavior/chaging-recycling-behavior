@@ -21,8 +21,8 @@
 			<div class="w3-dropdown-hover">
 				<a href = "#"class=" w3-button w3-mobile w3-border-right">Recycling Near Me</a>
 				<div class="w3-dropdown-content w3-bar-block w3-card-4">
-					<a href="RecyclingNearMe2.html" class="w3-bar-item w3-button">Nearby Recycling Centers</a>
-					<a href="RecyclingNearMe.html" class="w3-bar-item w3-button">Recycling in NU</a>
+					<a href="RecyclingNearMe2.html" class="w3-bar-item w3-button">Search by Address</a>
+					<a href="RecyclingNearMe.html" class="w3-bar-item w3-button">Search by Recycle Type</a>
 				</div>
 			</div>
 			<div class="w3-dropdown-hover">
@@ -43,12 +43,13 @@
 			</ul>
 			</div>
 			<div>
-				<h3 class="pageTitle">Drop point created!</h3>
+				<h1 class="pageTitle">Drop point created!</h3>
 			</div>
-			<div class="pageDescription">
-				<p>You have successfully created a drop point! The details of your drop point are:</p>
+      <div class = "main">
+			<div class="sidebar">
+				<p style= "margin-left: 10px; font-size: 110%">You have successfully created a drop point! The details of your drop point are:</p>
 				<p>
-					<table id="confirmationTable">
+					<table class = "table table-bordered" id="confirmationTable">
 						<tr>
 							<td>Address:</td>
 							<td class="formData" id="formAddress"></td>
@@ -79,13 +80,19 @@
 						</tr>
 					</table>
 				</p>
-				<div id="map"></div>
+				<a href="dropCreate.html" style ="background: green"class="button">Create Another Drop Point</a>
+				<br></br>
+				<a href="dropFind.html" style ="background: blue"class="button">View All Drop Points</a>
+				</div>
+				<div id="map4"></div>
 				<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBlof8XhnNat5G2alXVLSzFDTmUNlgEZKw"
 				async defer></script>
 			</div>
-			<footer class="footer-bar">
+
+
+			<!-- <footer class="footer-bar">
 			<p>&nbsp;</p>
-			</footer>
+			</footer> -->
 		</div>
 
     </body>
