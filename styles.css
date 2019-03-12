@@ -258,10 +258,11 @@ table#filter-table th {
 
 /*recycling near me */
 .main {
-	height: 900px;
+	height: 700px;
 	width: 100%;
 	margin: auto;
 	text-align: left;
+	overflow: auto;
 }
 
 .sidebar{
@@ -294,7 +295,7 @@ a.button{
 	-webkit-border-radius: 5px;
 	border-radius: 5px;
 	color: white;
-	
+
 	text-decoration: none;
 	margin-left: 10px;
 }
@@ -313,4 +314,22 @@ table, th, td {
   border: 2px solid #527a4b;
 	border-collapse: collapse;
 
+}
+.horizontal{
+	display: block;
+	width: 50%;
+	position: relative;
+}
+.horibar{
+	height: 25%;
+	width: 100%;
+	float: left;
+	background : #ddffcc;
+	border: 3px solid #527a4b;
+	border-radius: 10px;
+	position: relative;
+}
+
+.horibar > div {
+    width: 25%;
 }
