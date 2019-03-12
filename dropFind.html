@@ -28,13 +28,7 @@
 					<a href="RecyclingNearMe.html" class="w3-bar-item w3-button">Search by Recycle Type</a>
 				</div>
 			</div>
-				<div class="w3-dropdown-hover">
-					<a href = "#"class=" w3-button w3-mobile w3-border-right">Recycling Near Me</a>
-					<div class="w3-dropdown-content w3-bar-block w3-card-4">
-						<a href="RecyclingNearMe2.html" class="w3-bar-item w3-button">Nearby Recycling Centers</a>
-						<a href="RecyclingNearMe.html" class="w3-bar-item w3-button">Recycling in NU</a>
-					</div>
-				</div>
+
 				<div class="w3-dropdown-hover">
 					<button class="w3-button">Community Recycling</button>
 					<div class="w3-dropdown-content w3-bar-block w3-card-4">
@@ -53,20 +47,22 @@
 			<div>
 				<div class="main">
 					<h3 class = "pageTitle">Find a Drop Point</h3>
-					<div class = "sidebar">
+          <div class="pageDescription" style="position: relative; overflow: hidden; display: flex; flex-direction: column;">
+            <p>Want to do your part to help your community's recycling efforts? Unable to get to a recylcing center near you? No problem!</p>
+            <p>Simply find a drop point near you that collects the types of materials you're looking to recycle and drop it off. It's that simple!</p>
+          </div>
+					<div class = "horibar">
 						<form method= "get" action="#" onsubmit="return filterDropPoints()">
-							<div class = "group">
+							<div style= "display: inline-block; margin-top: 20px; width: 30%" class = "group">
 								<input id="address1" type="text" onclick = "seText('Address', 'address label')" required>
 								<label id = "address label" >Address</label>
-								<br></br>
 							</div>
-							<div class = "group">
+							<div style= "display: inline-block" class = "group">
 								<input id="city" type="text" onclick = "seText('City', 'city label')" required>
 								<label id = "city label">City</label>
 							</div>
-							<div class="group">
-								<p id = "stateLabel" style = "font-size: 18px; color:black; margin-left: 10px; top:10px">State</p>
-								<select style="margin-left:  10px;" id="state" onchange="changeColor()">
+							<div style= "display: inline-block; " class="group">
+								<select style="width: 70% " id="state" onchange="changeColor()">
 									<option value= "">State</option>
 									<option value="AL">AL - Alabama</option>
 									<option value="AK">AK - Alaska</option>
@@ -120,21 +116,15 @@
 									<option value="WI">WI - Wisconsin</option>
 									<option value="WY">WY - Wyoming</option>
 								</select>
-								<br></br>
 							</div>
-							<div class="group">
+							<div style= "display: inline-block;margin-left: 1%" class="group">
 								<input id="zip" type="text" onclick = "seText('Zip', 'zip label')" required pattern="^[0-9]{5}(?:-[0-9]{4})?$">
-							  <label id = "zip label">Zip<label>
-							  <br></br>
+							  <label id = "zip label" >Zip<label>
+
 							</div>
-							<br></br>
-							<input type = "submit" onclick = "search()">
-						</form>
-					</div>
-					<div class="pageDescription" style="position: relative; overflow: hidden; display: flex; flex-direction: column;">
-						<p>Want to do your part to help your community's recycling efforts? Unable to get to a recylcing center near you? No problem!</p>
-						<p>Simply find a drop point near you that collects the types of materials you're looking to recycle and drop it off. It's that simple!</p>
-						<div class="form-field">
+              <br></br>
+
+            <div class="form-field" style="margin-left: 1%">
 							<div class="form-label">Materials Accepted:</div>
 							<table cellspacing="10">
 								<tr>
@@ -161,6 +151,11 @@
 								</tr>
 							</table>
 						</div>
+            <input type = "submit" style ="margin-left: 1%;width: 10%;"onclick = "search()">
+            	</form>
+          </div>
+
+            <div class = "pageDescription">
 						<div id="dropPointResults">
 							<h4>Drop Points Search Results:</h4>
 							<table id="filter-table">
@@ -232,6 +227,7 @@
 									</tr>
 								</tbody>
 							</table>
+
 							<p><em>Note, please be a good neighbor and be sure to double-check when items are accepted until at the drop point, as well as review any notes the drop point creator has left.</em></p>
 						</div>
 					</div>

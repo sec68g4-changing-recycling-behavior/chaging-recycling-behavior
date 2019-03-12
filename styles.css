@@ -321,15 +321,12 @@ table, th, td {
 	position: relative;
 }
 .horibar{
-	height: 25%;
+	height: 40%;
 	width: 100%;
 	float: left;
 	background : #ddffcc;
 	border: 3px solid #527a4b;
 	border-radius: 10px;
 	position: relative;
-}
 
-.horibar > div {
-    width: 25%;
 }
