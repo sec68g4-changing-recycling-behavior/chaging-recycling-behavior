@@ -20,8 +20,16 @@
 				<h2 class="title">Changing Recycling Behavior</h2>
 			</header>
 			<div class="w3-bar w3-dark-green">
-				<a href="#" class="w3-bar-item w3-button w3-mobile w3-border-right">Home</a>
-				<a href="infoPage.html" class="w3-bar-item w3-button w3-mobile w3-border-right">How Do I Recycle?</a>
+
+			<a href="#" class="w3-bar-item w3-button w3-mobile w3-border-right">Home</a>
+			<a href="infoPage.html" class="w3-bar-item w3-button w3-mobile w3-border-right">How Do I Recycle?</a>
+      <div class="w3-dropdown-hover">
+        <a href = "#"class=" w3-button w3-mobile w3-border-right">Recycling Near Me</a>
+      <div class="w3-dropdown-content w3-bar-block w3-card-4">
+        <a href="RecyclingNearMe2.html" class="w3-bar-item w3-button">Search by Address</a>
+        <a href="RecyclingNearMe.html" class="w3-bar-item w3-button">Search by Recycle Type</a>
+      </div>
+      </div>
 				<div class="w3-dropdown-hover">
 					<a href = "#"class=" w3-button w3-mobile w3-border-right">Recycling Near Me</a>
 					<div class="w3-dropdown-content w3-bar-block w3-card-4">
@@ -40,6 +48,7 @@
 					</div>
 				</div>
 			</div>
+
 			<div>
 				<div class = "main">
 					<h1 class = "pageTitle">Nearby Recycling Centers</h1>
@@ -111,6 +120,7 @@
 							</select>
 							<br></br>
 						</div>
+
     					<div class="group">
 							<input id="zip" type="text" onclick = "seText('Zip', 'zip label')" required pattern="^[0-9]{5}(?:-[0-9]{4})?$">
 						  <label id = "zip label">Zip<label>

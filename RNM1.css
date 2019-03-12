@@ -16,7 +16,7 @@ ul {
 }
 
 li {
- font: 200 16px Helvetica, Verdana, sans-serif;
+ 
  margin: 0 0 30px 0;
 }
 
@@ -24,7 +24,7 @@ li:last-child {
  border: none;
 }
 
-li a {
+.amp{
 
  color: #000;
  display: block;
@@ -37,7 +37,7 @@ li a {
  transition: font-size 0.3s ease, background-color 0.3s ease;
 }
 
-li a:hover {
+.amp:hover {
  font-size: 22px;
 
 }
