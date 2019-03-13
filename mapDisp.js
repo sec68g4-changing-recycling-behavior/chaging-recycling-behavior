@@ -32,7 +32,7 @@ function showClosestCenter() {
 function processFormData() {
   params = getParams();
   address1 = cleanup(unescape(params["address1"]));
-  address2 = cleanup(unescape(params["address2"]));
+
   city = cleanup(unescape(params["city"]));
   state = unescape(params["state"]);
   zip = cleanup(unescape(params["zip"]));
@@ -45,10 +45,8 @@ function processFormData() {
   mat = getRecyclables("Electronics", mat);
   mat = getRecyclables("mat-other", mat);
 
-  if (address2 == "")
+
 	document.getElementById("formAddress").innerHTML = address1;
-  else
-	document.getElementById("formAddress").innerHTML = address1 + "</br>" + address2;
   document.getElementById("formCity").innerHTML = city;
   document.getElementById("formState").innerHTML = state;
   document.getElementById("formZip").innerHTML = zip;
@@ -103,7 +101,7 @@ function initMap() {
   });
 
   var geocoder = new google.maps.Geocoder();
-  var a = address1 + " " + address2 + " " + city + " " + state + " " + zip;
+  var a = address1 + " " + city + " " + state + " " + zip;
 
   geocoder.geocode({'address': a}, function(results, status) {
   if (status === 'OK') {

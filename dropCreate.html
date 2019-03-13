@@ -54,15 +54,15 @@
 
 				<fieldset class="input-form">
 					<div style= "display: inline-block; margin-top: 20px; width: 30%" class = "group">
-						<input id="address1" type="text" onclick = "seText('Address', 'address label')" required>
+						<input name="address1" type="text" onclick = "seText('Address', 'address label')" required>
 						<label id = "address label" >Address</label>
 					</div>
 					<div style= "display: inline-block" class = "group">
-						<input id="city" type="text" onclick = "seText('City', 'city label')" required>
+						<input name="city" type="text" onclick = "seText('City', 'city label')" required>
 						<label id = "city label">City</label>
 					</div>
 					<div style= "display: inline-block; " class="group">
-						<select style="width: 70% " id="state" onchange="changeColor()">
+						<select style="width: 70% " name="state" onchange="changeColor()">
 							<option value= "">State</option>
 							<option value="AL">AL - Alabama</option>
 							<option value="AK">AK - Alaska</option>
@@ -118,7 +118,7 @@
 						</select>
 					</div>
 					<div style= "display: inline-block;margin-left: 1%" class="group">
-						<input id="zip" type="text" onclick = "seText('Zip', 'zip label')" required pattern="^[0-9]{5}(?:-[0-9]{4})?$">
+						<input name="zip" type="text" onclick = "seText('Zip', 'zip label')" required pattern="^[0-9]{5}(?:-[0-9]{4})?$">
 					  	<label id = "zip label" >Zip<label>
 
 					</div>
@@ -160,7 +160,7 @@
 					<div style="width:20%">
 						<input type= "submit" value= "Submit" >
 					</div>
-					
+
 				</fieldset>
 				</form>
 			</div>
