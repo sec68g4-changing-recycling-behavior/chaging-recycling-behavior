@@ -31,7 +31,7 @@ dict["ink"] = ink;
 
 var markers = []
 
-function search() {
+function searchOff() {
   clearMarkers();
   var q2 = document.getElementById("q2").value;
   var q1 = document.getElementById("q1").value;

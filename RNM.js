@@ -9,7 +9,7 @@ function initMap() {
 var markers = [];
 
 
-function search() {
+function searchOn() {
   clearMarkers();
 
   var address = document.getElementById("address1").value;

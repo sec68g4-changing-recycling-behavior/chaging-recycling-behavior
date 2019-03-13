@@ -261,7 +261,7 @@ table#filter-table th {
 
 /*recycling near me */
 .main {
-	height: 700px;
+	height: 800px;
 	width: 100%;
 	margin: auto;
 	text-align: left;
@@ -274,7 +274,6 @@ table#filter-table th {
 	float: left;
 	background : #ddffcc;
 	border: 3px solid #527a4b;
-	border-radius: 10px;
 	position: relative;
 
 }
@@ -329,7 +328,9 @@ table, th, td {
 	float: left;
 	background : #ddffcc;
 	border: 3px solid #527a4b;
-	border-radius: 10px;
 	position: relative;
 
+}
+.myDiv{
+	display:none;
 }
