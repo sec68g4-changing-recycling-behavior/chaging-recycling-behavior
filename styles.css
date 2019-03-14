@@ -83,6 +83,55 @@ ul.breadcrumb li a:hover {
 }
 
 /*
+	homePage.html styling
+*/
+
+.home-banner {
+	height: 105%;
+	background-image: url(image/grass.jpg);
+	overflow: hidden;
+}
+
+.banner-text {
+	margin: 5% 0 5% 5%;
+	color: white;
+	font-size: 40px;
+	text-shadow: 1px 1px black;
+}
+
+.banner-bar {
+	display: flex;
+	flex-direction: row;
+	height: 30%;
+	width: 100%;
+}
+
+.bar-box {
+	margin-top: 2%;
+	margin-left: auto;
+	margin-right: auto;
+	width: 20%;
+}
+
+.bar-button {
+	color: white;
+	background-color: green;
+	font-size: 18px;
+	padding: 10px 20px 10px 20px;
+	border: 0px;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+	transition: 0.3s;
+}
+
+.bar-button:hover {
+	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.bar-text {
+	margin-top: 5%;
+}
+
+/*
 	infoPage.html styling
 */
 
