@@ -60,6 +60,17 @@ function changePage(page) {
         case 'misc':
             window.location = ("infoOtherMisc.html");
             break;
+        case 'infoPage':
+            window.location = ("infoPage.html");
+            break;
+        case 'rnm':
+            window.location = ("RecyclingNearMe2.html");
+            break;
+        case 'dropFind':
+            window.location = ("dropFind.html");
+            break;
+        case 'dropCreate':
+            window.location = ("dropCreate.html");
     }
 }
 
