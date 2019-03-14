@@ -1,8 +1,16 @@
 
 function validateForm() {
 	
-	if(document.getElementsByName("Metals")[0].checked || document.getElementsByName("Paper")[0].checked || document.getElementsByName("Plastics")[0].checked || document.getElementsByName("Electronics")[0].checked || document.getElementsByName("mat-other")[0].value.trim() != "")
+	if(document.getElementsByName("Metals")[0].checked || document.getElementsByName("Paper")[0].checked || document.getElementsByName("Plastics")[0].checked || document.getElementsByName("Electronics")[0].checked || document.getElementsByName("mat-other")[0].value.trim() != "") {
+		
+		// Set the appropriate values in local storage
+		localStorage.setItem("userAddress", document.getElementById("address1").value)
+		localStorage.setItem("userCity", document.getElementById("city").value)
+		localStorage.setItem("userState", document.getElementById("state").value)
+		localStorage.setItem("userZip", document.getElementById("zip").value)
+
 		return true;
+	}
 	else {
 		alert("Please select at least one type of material that you will accept at your drop point before proceeding.");
 		return false;
@@ -86,6 +94,11 @@ function materialClick() {
 }
 
 function filterOnLoad() {
+	
+	// Populate address fields from session state
+	populateSavedAddress();
+	
+	// Set checkbox filters as needed
 	filterParam = getAllUrlParams(window.location).filter;
 	if (typeof filterParam !== "undefined") {
 		// Uncheck all boxes
@@ -174,4 +187,15 @@ function getAllUrlParams(url) {
   }
 
   return obj;
+}
+
+function populateSavedAddress() {
+	
+	// Check to see if the cookie exists. If so, read and populate data.
+	if (localStorage.getItem("userAddress") != null) {
+		document.getElementById("address1").value = localStorage.getItem("userAddress");
+		document.getElementById("city").value = localStorage.getItem("userCity");
+		document.getElementById("state").value = localStorage.getItem("userState");
+		document.getElementById("zip").value = localStorage.getItem("userZip");
+	}
 }

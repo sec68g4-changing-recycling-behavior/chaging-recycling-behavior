@@ -56,7 +56,7 @@ function searchOn() {
   document.getElementById("zip label").innerHTML = "Zip";
   document.getElementById("zip label").style.color = "#5264AE";
 
-}
+  }
   var geocoder = new google.maps.Geocoder();
   var a = address + " " + city + " " + state + " " + zip;
 
@@ -92,6 +92,13 @@ function searchOn() {
     alert('Geocode was not successful for the following reason: ' + status);
   }
 });
+
+	// Save state
+	localStorage.setItem("userAddress", document.getElementById("address1").value)
+	localStorage.setItem("userCity", document.getElementById("city").value)
+	localStorage.setItem("userState", document.getElementById("state").value)
+	localStorage.setItem("userZip", document.getElementById("zip").value)
+
 }
 
 
