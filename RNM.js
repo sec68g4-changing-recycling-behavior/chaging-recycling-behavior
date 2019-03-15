@@ -69,6 +69,7 @@ function searchOn() {
       map: map,
       position: results[0].geometry.location
     });
+    markers.push(marker);
     var infoWindow=new google.maps.InfoWindow({
     content: a});
     infoWindow.open(map, marker);
